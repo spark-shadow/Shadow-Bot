@@ -156,9 +156,19 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
                         shadowupdate += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + commit.author_name + '>\n';
                     }
                 );
-                await conn.sendMessage(
-                    conn.user.jid,
-                    '```' + shadowupdate + '```type``` *.update now* ```to update```\n', MessageType.text
+                const buttons = [
+  {buttonId: 'id1', buttonText: {displayText: '#update'}, type: 1},
+  {buttonId: 'id2', buttonText: {displayText: '#update now'}, type: 1}
+]
+
+const buttonMessage = {
+    contentText: shadowupdate,
+    footerText: '2021 © SHADOW',
+    buttons: buttons,
+    headerType: 1
+}
+
+await conn.sendMessage(con.user.jid, buttonMessage, MessageType.buttonsMessage
                 ); 
             } 
       }
