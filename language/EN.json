@@ -242,7 +242,7 @@
         "updater": {
             "UPDATER_DESC": "Checks the update for ꜱʜᴀᴅᴏᴡ.",
             "UPDATE": "ʏᴏᴜʀ ꜱʜᴀᴅᴏᴡ ɪꜱ ᴄᴏᴍᴘʟᴇᴛᴇʟʏ ᴜᴘ-ᴛᴏ-ᴅᴀᴛᴇ",
-            "NEW_UPDATE": "*New update available for Shadow!*\n\n ```use .list for commands``` \n\n *contact shadow before updating or your bot might stop working* \n\n wa.me/919526808481 \n\n *-if bot stop working you will have to re-deploy* \n\n Updates are:\n\n ",
+            "NEW_UPDATE": "*New update available for Bot!*\n\nChanges:\n```",
             "UPDATE_NOW_DESC": "It makes updates.",
             "UPDATING": "ꜱʜᴀᴅᴏᴡ ᴜᴘᴅᴀᴛɪɴɢ...",
             "INVALID_HEROKU": "*❌ Your Heroku information is wrong!*",
