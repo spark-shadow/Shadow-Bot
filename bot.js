@@ -169,7 +169,7 @@ const buttonMessage = {
     headerType: 1
 }
 
-await conn.sendMessage(con.user.jid, buttonMessage, MessageType.buttonsMessage
+await conn.sendMessage(conn.user.jid, buttonMessage, MessageType.buttonsMessage
                 ); 
             } 
       }
