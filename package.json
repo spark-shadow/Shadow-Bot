@@ -2,13 +2,13 @@
   "name": "Shadow-Bot",
   "version": "7.3.6",
   "description": "Shadow is the Modified Version of WhatsAsena.",
-  "main": "./Shadow-Bot/bot.js",
+  "main": "./BETA-MOD/bot.js",
   "scripts": {
     "start": "supervisor -s bot.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SPARK-SHADOW/Shadow-Bot.git"
+    "url": "git+https://github.com/SPARK-SHADOW/BETA-MOD.git"
   },
   "keywords": [
     "whatsapp",
@@ -21,9 +21,9 @@
   "developer": "@SPARK-SHADOW",
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/SPARK-SHADOW/Shadow-Bot/issues"
+    "url": "https://github.com/SPARK-SHADOW/BETA-MOD/issues"
   },
-  "homepage": "https://github.com/SPARK-SHADOW/Shadow-Bot#readme",
+  "homepage": "https://github.com/SPARK-SHADOW/BETA-MOD#readme",
   "dependencies": {
     "@lh2020/speedtest-net": "^2.1.1",
     "textmaker-thiccy": "1.2.1",
