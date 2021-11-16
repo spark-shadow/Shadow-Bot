@@ -158,7 +158,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
                 );
                 const buttons = [
   {buttonId: 'id1', buttonText: {displayText: '#update'}, type: 1},
-  {buttonId: 'id2', buttonText: {displayText: '#update now'}, type: 1}
+  {buttonId: 'id2', buttonText: {displayText: '#update now'}, type: 1},
+  {buttonId: 'id3', buttonText: {displayText: '#restart'}, type: 1}
 ]
 
 const buttonMessage = {
