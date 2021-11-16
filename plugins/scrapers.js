@@ -6,7 +6,7 @@ const MyPnky = require('../events');
 const {MessageType,Mimetype} = require('@adiwajshing/baileys');
 const translatte = require('translatte');
 const config = require('../config');
-const Pinky = require('../pinky');
+const Spark = require('../spark');
 const LanguageDetect = require('languagedetect');
 const lngDetector = new LanguageDetect();
 const Heroku = require('heroku-client');
@@ -381,15 +381,15 @@ if (config.WORKTYPE == 'private') {
             });
     }));
     
-    MyPnky.addCommand({pattern: 'number', fromMe: false, desc: Lang.NUMBER}, (async (message, match) => {
+    MyPnky.addCommand({pattern: 'owner', fromMe: false, desc: Lang.NUMBER}, (async (message, match) => {
 
             const p_lk = 'BEGIN:VCARD\n'
             + 'VERSION:3.0\n' 
-            + 'FN:' + Pinky.OA_NAME + '\n' //created afnanplk, please copy this with credit..
-            + 'ORG:pinky julie fam;\n' 
-            + 'TEL;type=CELL;type=VOICE;waid=' + Pinky.PHONE + ':' + Pinky.PHONE + ' \n'
+            + 'FN:' + Spark.OA_NAME + '\n' //created afnanplk, please copy this with credit..
+            + 'ORG: ;\n' 
+            + 'TEL;type=CELL;type=VOICE;waid=' + Spark.PHONE + ':' + Spark.PHONE + ' \n'
             + 'END:VCARD'
-await message.client.sendMessage(message.jid, {displayname: "PINKY", vcard: p_lk}, MessageType.contact);
+await message.client.sendMessage(message.jid, {displayname: "Shadow⚡", vcard: p_lk}, MessageType.contact);
 
   }));    
 
@@ -1022,11 +1022,11 @@ else if (config.WORKTYPE == 'public') {
 
             const p_lk = 'BEGIN:VCARD\n'
             + 'VERSION:3.0\n' 
-            + 'FN:' + Pinky.OA_NAME + '\n' //created afnanplk, please copy this with credit..
-            + 'ORG:pinky julie fam;\n' 
-            + 'TEL;type=CELL;type=VOICE;waid=' + Pinky.PHONE + ':' + Pinky.PHONE + ' \n'
+            + 'FN:' + Spark.OA_NAME + '\n' //created afnanplk, please copy this with credit..
+            + 'ORG: ;\n' 
+            + 'TEL;type=CELL;type=VOICE;waid=' + Spark.PHONE + ':' + Spark.PHONE + ' \n'
             + 'END:VCARD'
-await message.client.sendMessage(message.jid, {displayname: "PINKY", vcard: p_lk}, MessageType.contact);
+await message.client.sendMessage(message.jid, {displayname: "Shadow⚡", vcard: p_lk}, MessageType.contact);
 
   }));    
 
