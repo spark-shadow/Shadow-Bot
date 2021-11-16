@@ -132,10 +132,32 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
         });
 
         console.log(
-            chalk.green.bold('𝚙𝚒𝚗𝚔𝚢 𝚠𝚘𝚛𝚔𝚒𝚗𝚐 ' + config.WORKTYPE + ' 𝚗𝚘𝚠 👻'));
-            await conn.sendMessage(conn.user.jid, "ᴘɪɴᴋʏ ɪꜱ ᴀʟʟ ꜱᴇᴛ", MessageType.text);
-            await conn.sendMessage(conn.user.jid, "``` WORKING " + config.WORKTYPE + "```" , MessageType.text);
-    });
+            chalk.green.bold('✅ Shadow-Bot working!')
+        );
+        await conn.sendMessage(
+            conn.user.jid,
+            '*Bot Started*',
+            MessageType.text
+          );
+          if (config.LANG == 'EN' || config.LANG == 'ML') {
+            await git.fetch();
+            var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
+            if (commits.total === 0) {
+                await conn.sendMessage(conn.user.jid,Lang.UPDATE, MessageType.text);    
+            } else {
+                var shadowupdate = Lang.NEW_UPDATE;
+                commits['all'].map(
+                    (commit) => {
+                        shadowupdate += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + commit.author_name + '>\n';
+                    }
+                );
+                await conn.sendMessage(
+                    conn.user.jid,
+                    '```' + shadowupdate + '```type``` *.update now* ```to update```\n', MessageType.text
+                ); 
+            } 
+      }
+        });
     
     conn.on('chat-update', async m => {
         if (!m.hasNewMessage) return;
