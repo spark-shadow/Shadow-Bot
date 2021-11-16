@@ -14,6 +14,7 @@ const {Message, StringSession, Image, Video} = require('./PinkyMwol/');
 const { DataTypes } = require('sequelize');
 const { GreetingsDB, getMessage } = require("./plugins/sql/greetings");
 const got = require('got');
+const git = simpleGit();
 const axios = require('axios');
 
 // Sql
