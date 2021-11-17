@@ -130,7 +130,6 @@ if (config.LANG == 'RU') {
 }
 
 if (config.STANDPLK == 'off' || config.STANDPLK == 'OFF') {
-if (config.WORKTYPE == 'private') {
 
     MyPnky.addCommand({pattern: 'trt(?: |$)(\\S*) ?(\\S*)', desc: Lang.TRANSLATE_DESC, usage: Lang.TRANSLATE_USAGE, fromMe: wk}, (async (message, match) => {
 
