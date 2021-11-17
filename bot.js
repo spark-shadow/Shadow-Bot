@@ -159,7 +159,7 @@ await conn.sendMessage(conn.user.jid, buttonMessage, MessageType.buttonsMessage)
                 var shadowupdate = Lang.NEW_UPDATE;
                 commits['all'].map(
                     (commit) => {
-                        shadowupdate += '│➩ [' + commit.date.substring(0, 10) + ']➠  *' + commit.message + '*  ▷ ' + commit.author_name + ' \n│';
+                        shadowupdate += '│➩ [' + commit.date.substring(0, 10) + '] ➠  *' + commit.message + '*  ↱ ' + commit.author_name + ' ↲\n│';
                     }
                 );
         const buttons = [
@@ -168,7 +168,7 @@ await conn.sendMessage(conn.user.jid, buttonMessage, MessageType.buttonsMessage)
         ]
     const { imageMessage } = await conn.prepareMessageMedia(fs.readFileSync('./uploads/image/Shadow.jpg'), MessageType.image);
     const buttonMessage = {
-        contentText: '╭──────────────────────────────╮\n│*➣ Bot Started * \n│\n```│' + shadowupdate + '\n│\n│ ☞ 𝚃𝚢𝚙𝚎 .𝐮𝐩𝐝𝐚𝐭𝐞 𝐧𝐨𝐰 𝚝𝚘 𝚄𝚙𝚍𝚊𝚝𝚎 𝚈𝚘𝚞𝚛 𝙱𝚘𝚝\n╰──────────────────────────────╯\n◩ 𝐂𝐨𝐝𝐞𝐝 𝐁𝐲 𝐒𝐡𝐚𝐝𝐨𝐰\n╭──────────────────────────────╮\n➣ 𝐂𝐨𝐧𝐭𝐚𝐜𝐭 𝐎𝐰𝐧𝐞𝐫...\n✆ wa.me/919526808481?text=Hi\n╰──────────────────────────────╯',
+        contentText: '╭──────────────────────────────╮\n│*➣ Bot Started * \n│\n```│' + shadowupdate + '\n│ ☞ 𝚃𝚢𝚙𝚎 .𝐮𝐩𝐝𝐚𝐭𝐞 𝐧𝐨𝐰 𝚝𝚘 𝚄𝚙𝚍𝚊𝚝𝚎 𝚈𝚘𝚞𝚛 𝙱𝚘𝚝\n╰──────────────────────────────╯\n◩ 𝐂𝐨𝐝𝐞𝐝 𝐁𝐲 𝐒𝐡𝐚𝐝𝐨𝐰\n╭──────────────────────────────╮\n➣ 𝐂𝐨𝐧𝐭𝐚𝐜𝐭 𝐎𝐰𝐧𝐞𝐫...\n✆ wa.me/919526808481?text=Hi\n╰──────────────────────────────╯',
         footerText: '2021 © SHADOW',
         buttons: buttons,
         headerType: 4,
