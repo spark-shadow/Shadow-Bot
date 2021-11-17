@@ -11,12 +11,12 @@ const Spark = require('../spark');
 
 const Language = require('../language');
 const Lang = Language.getString('_asena');
-var url = await axios.get(Spark.THUMBNAIL, { responseType: 'arraybuffer' })
+
 if (Config.STANDPLK == 'off') {
 if (Config.WORKTYPE == 'private') {
 
     MyPnky.addCommand({pattern: 'list ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-
+    var url = await axios.get(Spark.THUMBNAIL, { responseType: 'arraybuffer' })
         var CMD_HELP = '';
         if (match[1] === '') {
             MyPnky.commands.map(
@@ -123,7 +123,7 @@ if (Config.WORKTYPE == 'private') {
 else if (Config.WORKTYPE == 'public') {
 
      MyPnky.addCommand({pattern: 'list ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
-
+     var url = await axios.get(Spark.THUMBNAIL, { responseType: 'arraybuffer' })
         var CMD_HELP = '';
         if (match[1] === '') {
             MyPnky.commands.map(
