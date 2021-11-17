@@ -379,3 +379,90 @@ MyPnky.addCommand({pattern: 'run again ?(.*)', fromMe: true, desc: AFN_STN }, (a
                 });
     await message.sendMessage('your bot will start running in 1 to 2 minute')
     }));
+// Presence changer 
+
+var PRE_dsc = ''
+
+    var PRE_online = ''
+
+    var PRE_offline = ''
+    
+    var PRE_typing = ''
+    
+    var PRE_recording = ''
+
+    if (config.LANG == 'EN') {
+
+        PRE_dsc = 'You can set Bot Presence. -owner command'
+
+        PRE_online = '```ʙᴏᴛ ᴘʀᴇsᴇɴᴄᴇ ᴄʜᴀɴɢᴇᴅ ᴛᴏ ᴏɴʟɪɴᴇ```'
+
+        PRE_offline = '```ʙᴏᴛ ᴘʀᴇsᴇɴᴄᴇ ᴄʜᴀɴɢᴇᴅ ᴛᴏ ᴏғғʟɪɴᴇ```'
+        
+        PRE_typing = '```ʙᴏᴛ ᴘʀᴇsᴇɴᴄᴇ ᴄʜᴀɴɢᴇᴅ ᴛᴏ ᴛʏᴘɪɴɢ```'
+        
+        PRE_recording = '```ʙᴏᴛ ᴘʀᴇsᴇɴᴄᴇ ᴄʜᴀɴɢᴇᴅ ᴛᴏ ʀᴇᴄᴏʀᴅɪɴɢ```'
+
+    }
+
+    MyPnky.addCommand({pattern: 'presence ?(.*)', fromMe: true, desc: PRE_dsc, usage: '.presence online / offline / typing / recording' }, (async (message, match) => {
+
+        if (match[1] == 'online') {
+
+                await heroku.patch(baseURI + '/config-vars', { 
+
+                    body: { 
+
+                        ['BOT_PRESENCE']: 'online'
+
+                    } 
+
+                });
+
+                await message.sendMessage(PRE_online)
+
+        } else if (match[1] == 'offline') {
+
+                await heroku.patch(baseURI + '/config-vars', { 
+
+                    body: { 
+
+                        ['BOT_PRESENCE']: 'offline'
+
+                    } 
+
+                });
+
+                await message.sendMessage(PRE_offline)
+
+        } else if (match[1] == 'typing') {
+
+                await heroku.patch(baseURI + '/config-vars', { 
+
+                    body: { 
+
+                        ['BOT_PRESENCE']: 'typing'
+
+                    } 
+
+                });
+
+                await message.sendMessage(PRE_typing)
+
+        } else if (match[1] == 'recording') {
+
+                await heroku.patch(baseURI + '/config-vars', { 
+
+                    body: { 
+
+                        ['BOT_PRESENCE']: 'recording'
+
+                    } 
+
+                });
+
+                await message.sendMessage(PRE_recording)
+
+        }
+
+    }));
