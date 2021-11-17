@@ -242,7 +242,7 @@
         "updater": {
             "UPDATER_DESC": "Checks the update for Bot.",
             "UPDATE": "ʏᴏᴜʀ ʙᴏᴛ ɪꜱ ᴄᴏᴍᴘʟᴇᴛᴇʟʏ ᴜᴘ-ᴛᴏ-ᴅᴀᴛᴇ",
-            "NEW_UPDATE": "*New update available for Bot!*\n\nChanges:\n```",
+            "NEW_UPDATE": "*New update available for Bot!*\n│\n│◩ Changes:\n```",
             "UPDATE_NOW_DESC": "It makes updates.",
             "UPDATING": "Updating...",
             "INVALID_HEROKU": "*❌ Your Heroku information is wrong!*",
