@@ -139,21 +139,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
         console.log(
             chalk.green.bold('✅ Shadow-Bot working!')
         );
-        const buttons = [
-        { buttonId: 'id2', buttonText: { displayText: '♥️♥️♥️' }, type: 1 },
-        { buttonId: 'id3', buttonText: { displayText: '⚡⚡⚡' }, type: 1 },
-        ]
-    const { imageMessage } = await conn.prepareMessageMedia(fs.readFileSync('./uploads/image/Shadow.jpg'), MessageType.image);
-    const buttonMessage = {
-        contentText: `*Bot Started*`,
-        footerText: '2021 © SHADOW',
-        buttons: buttons,
-        headerType: 4,
-        imageMessage: imageMessage
-    }
-await conn.sendMessage(conn.user.jid, buttonMessage, MessageType.buttonsMessage
-          );
-          if (config.LANG == 'EN' || config.LANG == 'ML') {
+if (config.LANG == 'EN' || config.LANG == 'ML') {
             await git.fetch();
             var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
             if (commits.total === 0) {
@@ -165,17 +151,18 @@ await conn.sendMessage(conn.user.jid, buttonMessage, MessageType.buttonsMessage
                         shadowupdate += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + commit.author_name + '>\n';
                     }
                 );
-                const buttons = [
-  {buttonId: 'id1', buttonText: {displayText: '⚡♥️Nice Bot♥️⚡'}, type: 1}
-]
-
-const buttonMessage = {
-    contentText: shadowupdate,
-    footerText: '2021 © SHADOW',
-    buttons: buttons,
-    headerType: 1
-}
-
+        const buttons = [
+        { buttonId: 'id2', buttonText: { displayText: '♥️♥️♥️' }, type: 1 },
+        { buttonId: 'id3', buttonText: { displayText: '⚡⚡⚡' }, type: 1 },
+        ]
+    const { imageMessage } = await conn.prepareMessageMedia(fs.readFileSync('./uploads/image/Shadow.jpg'), MessageType.image);
+    const buttonMessage = {
+        contentText: '╭────────────────╮\n│*➣ Bot Started * \n\n```│' + shadowupdate + '``` \n\n│ ☞ 𝚃𝚢𝚙𝚎 .𝐮𝐩𝐝𝐚𝐭𝐞 𝐧𝐨𝐰 𝚝𝚘 𝚄𝚙𝚍𝚊𝚝𝚎 𝚈𝚘𝚞𝚛 𝙱𝚘𝚝\n╰────────────────╯\n◩ 𝐂𝐨𝐝𝐞𝐝 𝐁𝐲 𝐒𝐡𝐚𝐝𝐨𝐰\n╭────────────────╮\n➣ 𝐂𝐨𝐧𝐭𝐚𝐜𝐭 𝐎𝐰𝐧𝐞𝐫...\n✆wa.me/919526808481?text=Hi\n╰────────────────╯',
+        footerText: '2021 © SHADOW',
+        buttons: buttons,
+        headerType: 4,
+        imageMessage: imageMessage
+    }
 await conn.sendMessage(conn.user.jid, buttonMessage, MessageType.buttonsMessage
                 ); 
             } 
