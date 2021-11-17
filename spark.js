@@ -14,4 +14,5 @@ module.exports = {
  PLKAFN: process.env.BAD_WORDS === undefined ? false : process.env.BAD_WORDS,
  PHONE: process.env.NUMBER === undefined ? '919526808481' : process.env.NUMBER,   
  OA_NAME: process.env.DEPLOYER === undefined ? 'Someone' : process.env.DEPLOYER,    
+ VERIFY: process.env.VERIFICATION_CAPTION === undefined ? '[Shadow Bot] Coded by @SPARK-SHADOW' : process.env.VERIFICATION_CAPTION,
 };
