@@ -7,7 +7,7 @@ const {MessageType,Mimetype} = require('@adiwajshing/baileys');
 const translatte = require('translatte');
 const config = require('../config');
 const Spark = require('../spark');
-let wk = Config.WORKTYPE == 'public' ? false : true
+let wk = config.WORKTYPE == 'public' ? false : true
 const LanguageDetect = require('languagedetect');
 const lngDetector = new LanguageDetect();
 const Heroku = require('heroku-client');
