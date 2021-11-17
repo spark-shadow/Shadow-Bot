@@ -148,7 +148,7 @@ if (config.LANG == 'EN' || config.LANG == 'ML') {
                 var shadowupdate = Lang.NEW_UPDATE;
                 commits['all'].map(
                     (commit) => {
-                        shadowupdate += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + commit.author_name + '>\n';
+                        shadowupdate += '│➩ [ ' + commit.date.substring(0, 10) + ' ]: ' + commit.message + ' < ' + commit.author_name + ' >\n│';
                     }
                 );
         const buttons = [
