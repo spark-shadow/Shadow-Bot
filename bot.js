@@ -139,10 +139,19 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
         console.log(
             chalk.green.bold('✅ Shadow-Bot working!')
         );
-        await conn.sendMessage(
-            conn.user.jid,
-            '*Bot Started*',
-            MessageType.text
+        const buttons = [
+        { buttonId: 'id2', buttonText: { displayText: '♥️♥️♥️' }, type: 1 },
+        { buttonId: 'id3', buttonText: { displayText: '⚡⚡⚡' }, type: 1 },
+        ]
+    const { imageMessage } = await message.client.prepareMessageMedia(fs.readFileSync('./uploads/image/Shadow.jpg'), MessageType.image);
+    const buttonMessage = {
+        contentText: `*Bot Started*`,
+        footerText: '2021 © SHADOW',
+        buttons: buttons,
+        headerType: 4,
+        imageMessage: imageMessage
+    }
+await conn.sendMessage(conn.user.jid, buttonMessage, MessageType.buttonsMessage
           );
           if (config.LANG == 'EN' || config.LANG == 'ML') {
             await git.fetch();
