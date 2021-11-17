@@ -179,8 +179,17 @@ await conn.sendMessage(conn.user.jid, buttonMessage, MessageType.buttonsMessage
         let msg = m.messages.all()[0];
         if (msg.key && msg.key.remoteJid == 'status@broadcast') return;
 
-        if (config.NO_ONLINE) {
+        if (config.BOT_PRESENCE == 'offline') {
             await conn.updatePresence(msg.key.remoteJid, Presence.unavailable);
+        
+        } else if (config.BOT_PRESENCE == 'online') {
+            await conn.updatePresence(msg.key.remoteJid, Presence.available);
+        
+        } else if (config.BOT_PRESENCE == 'typing') {
+            await conn.updatePresence(msg.key.remoteJid, Presence.composing);
+        
+        } else if (config.BOT_PRESENCE == 'recording') {
+            await conn.updatePresence(msg.key.remoteJid, Presence.recording);
         }
         
 
