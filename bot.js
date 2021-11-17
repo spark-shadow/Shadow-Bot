@@ -143,7 +143,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
         { buttonId: 'id2', buttonText: { displayText: '♥️♥️♥️' }, type: 1 },
         { buttonId: 'id3', buttonText: { displayText: '⚡⚡⚡' }, type: 1 },
         ]
-    const { imageMessage } = await message.client.prepareMessageMedia(fs.readFileSync('./uploads/image/Shadow.jpg'), MessageType.image);
+    const { imageMessage } = await conn.prepareMessageMedia(fs.readFileSync('./uploads/image/Shadow.jpg'), MessageType.image);
     const buttonMessage = {
         contentText: `*Bot Started*`,
         footerText: '2021 © SHADOW',
