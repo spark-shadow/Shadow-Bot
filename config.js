@@ -19,6 +19,7 @@ module.exports = {
     VERSION: 'v7.3.6',
     CHANNEL: 'https://t.me/remasterplugin',
     SESSION: process.env.SHADOW_SESSION === undefined ? '' : process.env.SHADOW_SESSION,
+    BOT_PRESENCE: process.env.BOT_PRESENCE === undefined ? 'online' : process.env.BOT_PRESENCE,
     ANTİLİNK: process.env.ANTİ_LİNK === undefined ? 'false' : process.env.ANTİ_LİNK,
     AUTOBİO: process.env.AUTO_BİO === undefined ? 'false' : process.env.AUTO_BİO,
     AFN: process.env.ALL_CAPTION === undefined ? 'MADE BY BOT' : process.env.ALL_CAPTION,
