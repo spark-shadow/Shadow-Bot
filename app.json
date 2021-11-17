@@ -18,8 +18,8 @@
         },
         "THUMBNAIL_URL": {
             "description": "Paste the image url here to set your photo logo as thumbnail",
-            "required": false
-            "value": "false"
+            "required": false,
+            "value": "https://i.imgur.com/xsKCqwZ.jpeg"
         },
         "BOT_PRESENCE": {
             "description": "Type the Presence of bot, presences: online => Always Shows the online, offline => Always Shows offline, typing => Always Shows typing, recording => Always Shows recording.. NOTE : THE PRESENCE WILL BE PERMANENT, UNTIL THE BOT IS ALIVE / RUNNING / WORKING",
