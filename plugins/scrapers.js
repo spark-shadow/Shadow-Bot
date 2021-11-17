@@ -732,3 +732,4 @@ await message.client.sendMessage(message.jid, {displayname: "Shadow⚡", vcard: 
             );
         }
     }));
+}
