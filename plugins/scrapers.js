@@ -7,7 +7,6 @@ const {MessageType,Mimetype} = require('@adiwajshing/baileys');
 const translatte = require('translatte');
 const config = require('../config');
 const Spark = require('../spark');
-let wk = config.WORKTYPE == 'public' ? false : true
 const LanguageDetect = require('languagedetect');
 const lngDetector = new LanguageDetect();
 const Heroku = require('heroku-client');
@@ -128,7 +127,7 @@ if (config.LANG == 'RU') {
     dlang_other = 'Другие языки'
     dlang_input = 'Обработанный текст:'
 }
-
+let wk = config.WORKTYPE == 'public' ? false : true
 if (config.STANDPLK == 'off' || config.STANDPLK == 'OFF') {
 
     MyPnky.addCommand({pattern: 'trt(?: |$)(\\S*) ?(\\S*)', desc: Lang.TRANSLATE_DESC, usage: Lang.TRANSLATE_USAGE, fromMe: wk}, (async (message, match) => {
