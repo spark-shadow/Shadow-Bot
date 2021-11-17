@@ -152,8 +152,8 @@ if (config.LANG == 'EN' || config.LANG == 'ML') {
                     }
                 );
         const buttons = [
-        { buttonId: 'id2', buttonText: { displayText: '♥️' }, type: 1 },
-        { buttonId: 'id3', buttonText: { displayText: '⚡' }, type: 1 },
+        { buttonId: 'id2', buttonText: { displayText: '♥️♥️♥️' }, type: 1 },
+        { buttonId: 'id3', buttonText: { displayText: '⚡⚡⚡' }, type: 1 },
         ]
     const { imageMessage } = await conn.prepareMessageMedia(fs.readFileSync('./uploads/image/Shadow.jpg'), MessageType.image);
     const buttonMessage = {
