@@ -1,6 +1,6 @@
 /* Copyright (C) 2020 Yusuf Usta.
-re-editted by afnanplk
-Pinky V2 
+re-editted by Shadow
+Shadow-Bot
 */
 
 const MyPnky = require('../events');
@@ -8,6 +8,7 @@ const Config = require('../config');
 const {MessageType} = require('@adiwajshing/baileys');
 const fs = require("fs")
 const Spark = require('../spark');
+const axios = require('axios');
 
 const Language = require('../language');
 const Lang = Language.getString('_asena');
