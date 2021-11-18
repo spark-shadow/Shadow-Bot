@@ -175,6 +175,11 @@
             "required": false,
             "value": "i am alive  \n\n ```coded by Shadow```\n\n```{qt}```"
         },
+        "ALIVE_URL": {
+            "description": "Customizable Alive Image!",
+            "required": false,
+            "value": "https://i.imgur.com/9XdouSJ.jpeg"
+        }, 
         "BAN_MESSAGE": {
             "description": "Customizable kick Message! Use => default, to change back.",
             "required": false,
