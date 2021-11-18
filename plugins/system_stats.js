@@ -83,8 +83,7 @@ var i = Math.floor(31*Math.random())
 	 var p = Math.floor(11*Math.random())
 
         var plk_alive = await axios.get(`${a_plk[p]}`, { responseType: 'arraybuffer' })
-        var url = await axios.get(Config.ALIVEURL, { responseType: 'arraybuffer' })
-        await message.client.sendMessage(message.jid, Buffer.from(url.data), MessageType.image, {mimetype: Mimetype.png, caption: Config.ALIVEMSG.replace('{time}', afnplk).replace('{qt}', r_text[i])})
+        await message.client.sendMessage(message.jid, Buffer.from(plk_alive.data), MessageType.image, {mimetype: Mimetype.png, caption: Config.ALIVEMSG.replace('{time}', afnplk).replace('{qt}', r_text[i])})
 	   }
     }));
 
