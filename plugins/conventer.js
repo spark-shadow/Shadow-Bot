@@ -262,7 +262,7 @@ else if (Config.WORKTYPE == 'public') {
         doc_desc = 'covert mp3 to document and rename to given name'
         plk = '```NAMING AND DOCIFYING```'
         afn = '```PLEASE REPLY TO A AUDIO```'
-        usge = '```.doc pinky *replace pinky with desired name*```'
+        usge = '```.doc Shadiq *replace Shadiw with desired name*```'
     }
     if (Config.LANG == 'ML') {
         doc_desc = 'ഡോക്യുമെന്റിലേക്ക് പരിവർത്തനം ചെയ്യുകയും നൽകിയപേര് ചേർക്കുകയും ചെയ്യുക'
