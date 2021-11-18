@@ -29,16 +29,16 @@ MyPnky.addCommand({pattern: 'update$', fromMe: true, dontAddCommandList: true, d
             Lang.UPDATE, MessageType.text
         );    
     } else {
-        var degisiklikler = Lang.NEW_UPDATE;
-        commits['all'].map(
-            (commit) => {
-                degisiklikler += '🔹 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + commit.author_name + '>\n';
-            }
-        );
+        var shadowupdate = Lang.NEW_UPDATE;
+                commits['all'].map(
+                    (commit) => {
+                        shadowupdate += '│➩ [' + commit.date.substring(0, 10) + '] ➠  *' + commit.message + '*   ↱ ' + commit.author_name + ' ↲\n';
+                    }
+                );
         
         await message.client.sendMessage(
             message.jid,
-            degisiklikler + '```', MessageType.text
+            '╭──────────────────────────╮\n│➣ 𝐁𝐨𝐭 𝐔𝐩𝐝𝐚𝐭𝐞  \n│\n```│' + shadowupdate + '│\n│ ☞ 𝚃𝚢𝚙𝚎 .𝐮𝐩𝐝𝐚𝐭𝐞 𝐧𝐨𝐰 𝚝𝚘 𝚄𝚙𝚍𝚊𝚝𝚎 𝚈𝚘𝚞𝚛 𝙱𝚘𝚝\n╰──────────────────────────╯\n◩ 𝐂𝐨𝐝𝐞𝐝 𝐁𝐲 𝐒𝐡𝐚𝐝𝐨𝐰\n╭──────────────────────────╮\n➣ 𝐂𝐨𝐧𝐭𝐚𝐜𝐭 𝐎𝐰𝐧𝐞𝐫...\n✆ wa.me/919526808481?text=Hi\n╰──────────────────────────╯', MessageType.text
         ); 
     }
 }));
