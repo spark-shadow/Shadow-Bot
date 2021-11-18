@@ -67,7 +67,7 @@ var i = Math.floor(31*Math.random())
 	}    
 	   else if (Config.ALIVEMSG.includes('{img}')) {
            var url = await axios.get(Config.ALIVEURL, { responseType: 'arraybuffer' })
-           await message.client.sendMessage(message.jid, Buffer.from(url.data), MessageType.image, { caption: Config.ALIVEMSG.replace('{img}', '').replace('{time}', afnplk).replace('{qt}', r_text[i])}); });
+           await message.client.sendMessage(message.jid, Buffer.from(url.data), MessageType.image, { caption: Config.ALIVEMSG.replace('{img}', '').replace('{time}', afnplk).replace('{qt}', r_text[i])});
 	   }
     }));
 
