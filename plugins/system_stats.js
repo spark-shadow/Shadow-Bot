@@ -65,9 +65,9 @@ var i = Math.floor(31*Math.random())
         try { pp = await message.client.getProfilePicture(message.jid.includes('-') ? message.data.participant : message.jid ); } catch { pp = await message.client.getProfilePicture(); }
         await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => { await message.client.sendMessage(message.jid, res.data, MessageType.image, { caption: Config.ALIVEMSG.replace('{pp}', '').replace('{time}', afnplk).replace('{qt}', r_text[i])}); });
 	}    
-	   else if (Config.ALIVEMSG.includes('{img}')) {
+	   else {
            var url = await axios.get(Config.ALIVEURL, { responseType: 'arraybuffer' })
-           await message.client.sendMessage(message.jid, Buffer.from(url.data), MessageType.image, { caption: Config.ALIVEMSG.replace('{img}', '').replace('{time}', afnplk).replace('{qt}', r_text[i])});
+           await message.client.sendMessage(message.jid, Buffer.from(url.data), MessageType.image, { caption: Config.ALIVEMSG.replace('{time}', afnplk).replace('{qt}', r_text[i])});
 	   }
     }));
 
