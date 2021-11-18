@@ -15,7 +15,7 @@ const axios = require('axios');
 
 const Language = require('../language');
 const Lang = Language.getString('system_stats');
-let wk = config.WORKTYPE == 'public' ? false : true
+let wk = Config.WORKTYPE == 'public' ? false : true
 if (Config.STANDPLK == 'off' || Config.STANDPLK == 'OFF') {
 
    MyPnky.addCommand({pattern: 'alive', fromMe: wk, desc: Lang.ALIVE_DESC}, (async (message, match) => {
