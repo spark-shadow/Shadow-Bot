@@ -17,7 +17,7 @@ const Lang = Language.getString('unvoice'); // Language support
 if (Config.STANDPLK == 'off' || Config.STANDPLK == 'OFF') {
 if (Config.WORKTYPE == 'private') {
 
-  MyPnky.addCommand({pattern: 'U ?(.*)', fromMe: true, desc: Lang.UV_DESC}, (async (message, match) => {    
+  MyPnky.addCommand({pattern: 'forward ?(.*)', fromMe: true, desc: Lang.UV_DESC}, (async (message, match) => {    
     if (message.reply_message === false);
     var location = await message.client.downloadAndSaveMediaMessage({
         key: {
@@ -107,7 +107,7 @@ MyPnky.addCommand({pattern: 'unimage', fromMe: true, dontAddCommandList: true}, 
 }
 else if (Config.WORKTYPE == 'public') {
 
-   MyPnky.addCommand({pattern: 'U ?(.*)', fromMe: true, desc: Lang.UV_DESC}, (async (message, match) => {    
+   MyPnky.addCommand({pattern: 'forward ?(.*)', fromMe: true, desc: Lang.UV_DESC}, (async (message, match) => {    
     if (message.reply_message === false);
     var location = await message.client.downloadAndSaveMediaMessage({
         key: {
