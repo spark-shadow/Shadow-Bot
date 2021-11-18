@@ -18,7 +18,7 @@ const Lang = Language.getString('system_stats');
 let wk = Config.WORKTYPE == 'public' ? false : true
 if (Config.STANDPLK == 'off' || Config.STANDPLK == 'OFF') {
 
-   MyPnky.addCommand({pattern: 'alive', fromMe: wk, desc: Lang.ALIVE_DESC}, (async (message, match) => {
+MyPnky.addCommand({pattern: 'alive', fromMe: wk, desc: Lang.ALIVE_DESC}, (async (message, match) => {
        
 	var plk_say = new Date().toLocaleString('HI', { timeZone: 'Asia/Kolkata' }).split(' ')[1]
         const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
@@ -65,11 +65,26 @@ var i = Math.floor(31*Math.random())
         try { pp = await message.client.getProfilePicture(message.jid.includes('-') ? message.data.participant : message.jid ); } catch { pp = await message.client.getProfilePicture(); }
         await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => { await message.client.sendMessage(message.jid, res.data, MessageType.image, { caption: Config.ALIVEMSG.replace('{pp}', '').replace('{time}', afnplk).replace('{qt}', r_text[i])}); });
 	}    
-	   else {//codded by shadow
+	   else {//codded by afnanplk
+		   
+		   var a_plk = new Array ();
 
-        var spark_alive = await axios.get(Config.ALIVEURL, { responseType: 'arraybuffer' })
-//codded by shadow
-        await message.client.sendMessage(message.jid, Buffer(spark_alive.data), MessageType.image, {mimetype: Mimetype.png, caption: Config.ALIVEMSG.replace('{time}', afnplk).replace('{qt}', r_text[i])})
+        a_plk[0] = "https://i.imgur.com/zdcqaaG.jpeg";
+        a_plk[1] = "https://mcdn.wallpapersafari.com/medium/20/69/juFNVl.jpg";
+        a_plk[2] = "https://cdn.wallpapersafari.com/51/57/WXxpck.jpg";
+        a_plk[3] = "https://cdn.wallpapersafari.com/72/42/nAdV2j.jpg";
+        a_plk[4] = "https://cdn.wallpapersafari.com/55/85/n5cLrp.jpg";
+        a_plk[5] = "https://i.imgur.com/zdcqaaG.jpeg";
+        a_plk[6] = "https://mcdn.wallpapersafari.com/medium/55/25/KrvA7S.jpg";
+        a_plk[7] = "https://images.pexels.com/photos/8294554/pexels-photo-8294554.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500";
+        a_plk[8] = "https://images.pexels.com/photos/8566473/pexels-photo-8566473.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500";
+        a_plk[9] = "https://wallpapercave.com/wp/wp2957455.jpg";
+        a_plk[10] = "https://i.imgur.com/1PPJq0Q.jpeg";
+	 var p = Math.floor(11*Math.random())
+
+        var plk_alive = await axios.get(`${a_plk[p]}`, { responseType: 'arraybuffer' })
+//codded by afnanplk
+        await message.client.sendMessage(message.jid, Buffer(plk_alive.data), MessageType.image, {mimetype: Mimetype.png, caption: Config.ALIVEMSG.replace('{time}', afnplk).replace('{qt}', r_text[i])})
 	   }
     }));
 
