@@ -1,4 +1,4 @@
-## Setup
+## Bot Setup
 
 1. Click [SCAN](https://replit.com/@SPARK-SHADOW/ShadowBot) and scan QR through Whatsapp Linked Devices Option in Your whatsapp App.
 2. You will get a long text that needs after 4th step (SHADOW_SESSION).
