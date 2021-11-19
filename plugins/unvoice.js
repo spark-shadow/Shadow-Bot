@@ -34,7 +34,22 @@ let id = match[1];
         .save('output.mp3')
         .on('end', async () => {
             var url = await axios.get(Spark.THUMBNAIL, { responseType: 'arraybuffer' })
-            await message.client.sendMessage(id, fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true})
+let options = {}
+options.ptt = true
+options.quoted = {
+      key: {
+        fromMe: false,
+        participant: "0@s.whatsapp.net",
+        remoteJid: "status@broadcast"
+      },
+      message: {
+        "imageMessage": {
+          "jpegThumbnail": Buffer.from(url.data),
+          "caption": Spark.VERIFY 
+        }
+      }
+    }
+     await message.client.sendMessage(id, fs.readFileSync('output.mp3'), MessageType.audio, options)
 });}));
 
 MyPnky.addCommand({pattern: 'unvoice', fromMe: true, desc: Lang.UV_DESC}, (async (message, match) => {    
