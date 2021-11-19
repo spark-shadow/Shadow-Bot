@@ -18,7 +18,7 @@ const Lang = Language.getString('unvoice'); // Language support
 if (Config.STANDPLK == 'off' || Config.STANDPLK == 'OFF') {
 if (Config.WORKTYPE == 'private') {
 
-  MyPnky.addCommand({pattern: 'send ?(.*)', fromMe: true, desc: 'Forward replied message example: .send jid}, (async (message, match) => {    
+  MyPnky.addCommand({pattern: 'send ?(.*)', fromMe: true, desc: 'Forward replied message example: .send jid' }, (async (message, match) => {    
     if (message.reply_message === false);
     var location = await message.client.downloadAndSaveMediaMessage({
         key: {
