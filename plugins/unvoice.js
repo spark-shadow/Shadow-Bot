@@ -12,7 +12,7 @@ const cwebp = require('cwebp-bin');
 const Config = require('../config');
 const axios = require('axios');
 const Spark = require('../spark');
-let wk = config.WORKTYPE == 'public' ? false : true
+let wk = Config.WORKTYPE == 'public' ? false : true
 
 const Language = require('../language');
 const Lang = Language.getString('unvoice'); // Language support
