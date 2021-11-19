@@ -160,6 +160,39 @@ MyPnky.addCommand({pattern: '1', fromMe: true, dontAddCommandList: true}, (async
             await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg});
 });}));
 
+  MyPnky.addCommand({pattern: 'send ?(.*)', fromMe: true, desc: 'Forward replied message' }, (async (message, match) => {    
+    if (message.reply_message === false);
+    var location = await message.client.downloadAndSaveMediaMessage({
+        key: {
+            remoteJid: message.reply_message.jid,
+            id: message.reply_message.id
+        },
+        message: message.reply_message.data.quotedMessage
+    });
+let id = match[1];
+    ffmpeg(location)
+        .format('mp3')
+        .save('output.mp3')
+        .on('end', async () => {
+            var url = await axios.get(Spark.THUMBNAIL, { responseType: 'arraybuffer' })
+let options = {}
+options.ptt = true
+options.quoted = {
+      key: {
+        fromMe: false,
+        participant: "0@s.whatsapp.net",
+        remoteJid: "status@broadcast"
+      },
+      message: {
+        "imageMessage": {
+          "jpegThumbnail": Buffer.from(url.data),
+          "caption": Spark.VERIFY 
+        }
+      }
+    }
+     await message.client.sendMessage(id, fs.readFileSync('output.mp3'), MessageType.audio, options)
+});}));
+
 MyPnky.addCommand({pattern: 'unimage', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
     if (message.reply_message === false) return await message.sendMessage("Tag an image");
     var downloading = await message.client.sendMessage(message.jid,"```Downloading & Uploading...```",MessageType.text);
