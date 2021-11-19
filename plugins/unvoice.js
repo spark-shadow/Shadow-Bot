@@ -141,3 +141,4 @@ MyPnky.addCommand({pattern: 'unimage', fromMe: wk, dontAddCommandList: true}, (a
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
  }));
 }
+}
