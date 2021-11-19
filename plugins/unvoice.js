@@ -66,7 +66,7 @@ options.quoted = {
         }
       }
     }
-     await message.client.sendMessage(id, fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio}, options)
+     await message.client.sendMessage(id, fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, options})
 });}));
 
 MyPnky.addCommand({pattern: '2 ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
@@ -189,7 +189,7 @@ options.quoted = {
         }
       }
     }
-     await message.client.sendMessage(id, fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio}, options)
+     await message.client.sendMessage(id, fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, options})
 });}));
 
 MyPnky.addCommand({pattern: '2 ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {    
