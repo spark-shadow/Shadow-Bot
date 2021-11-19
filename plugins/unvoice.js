@@ -18,7 +18,6 @@ const Language = require('../language');
 const Lang = Language.getString('unvoice'); // Language support
 
 if (Config.STANDPLK == 'off' || Config.STANDPLK == 'OFF') {
-if (Config.WORKTYPE == 'private') {
 
 MyPnky.addCommand({pattern: 'unvoice', fromMe: wk, desc: Lang.UV_DESC}, (async (message, match) => {    
     if (message.reply_message === false);
@@ -140,5 +139,4 @@ MyPnky.addCommand({pattern: 'unimage', fromMe: wk, dontAddCommandList: true}, (a
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
  }));
-}
 }
