@@ -51,22 +51,7 @@ let id = match[1];
         .save('output.mp3')
         .on('end', async () => {
             var url = await axios.get(Spark.THUMBNAIL, { responseType: 'arraybuffer' })
-let options = {}
-options.ptt = true
-options.quoted = {
-      key: {
-        fromMe: false,
-        participant: "0@s.whatsapp.net",
-        remoteJid: "status@broadcast"
-      },
-      message: {
-        "imageMessage": {
-          "jpegThumbnail": Buffer.from(url.data),
-          "caption": Spark.VERIFY 
-        }
-      }
-    }
-     await message.client.sendMessage(id, fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, options})
+     await message.client.sendMessage(id, fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true})
 });}));
 
 MyPnky.addCommand({pattern: '2 ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
@@ -174,22 +159,7 @@ let id = match[1];
         .save('output.mp3')
         .on('end', async () => {
             var url = await axios.get(Spark.THUMBNAIL, { responseType: 'arraybuffer' })
-let options = {}
-options.ptt = true
-options.quoted = {
-      key: {
-        fromMe: false,
-        participant: "0@s.whatsapp.net",
-        remoteJid: "status@broadcast"
-      },
-      message: {
-        "imageMessage": {
-          "jpegThumbnail": Buffer.from(url.data),
-          "caption": Spark.VERIFY 
-        }
-      }
-    }
-     await message.client.sendMessage(id, fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, options})
+     await message.client.sendMessage(id, fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true})
 });}));
 
 MyPnky.addCommand({pattern: '2 ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {    
