@@ -139,45 +139,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
         console.log(
             chalk.green.bold('✅ Shadow-Bot working!')
         );
-if (config.LANG == 'EN' || config.LANG == 'ML') {
-            await git.fetch();
-            var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
-            if (commits.total === 0) {
-const buttons = [
-        { buttonId: 'id4', buttonText: { displayText: '♥️♥️♥️' }, type: 1 }
-        ]
-    const { imageMessage } = await conn.prepareMessageMedia(fs.readFileSync('./uploads/image/Shadow.jpg'), MessageType.image);
-    const buttonMessage = {
-        contentText: '╭─────────────────────────╮\n│➣ 𝐁𝐨𝐭 𝐒𝐭𝐚𝐫𝐭𝐞𝐝  \n│\n│◩ ' + Lang.UPDATE + '\n│\n│ ☞ 𝚃𝚢𝚙𝚎 .𝐥𝐢𝐬𝐭 𝙵𝚘𝚛 𝙲𝚘𝚖𝚖𝚊𝚗𝚍 𝙻𝚒𝚜𝚝\n╰─────────────────────────╯\n◩ 𝐂𝐨𝐝𝐞𝐝 𝐁𝐲 𝐒𝐡𝐚𝐝𝐨𝐰\n╭─────────────────────────╮\n➣ 𝐂𝐨𝐧𝐭𝐚𝐜𝐭 𝐎𝐰𝐧𝐞𝐫...\n✆ wa.me/919526808481?text=Hi\n╰─────────────────────────╯',
-        footerText: '2021 © SHADOW',
-        buttons: buttons,
-        headerType: 4,
-        imageMessage: imageMessage
-    }
-await conn.sendMessage(conn.user.jid, buttonMessage, MessageType.buttonsMessage);    
-            } else {
-                var shadowupdate = Lang.NEW_UPDATE;
-                commits['all'].map(
-                    (commit) => {
-                        shadowupdate += '│➩ [' + commit.date.substring(0, 10) + '] ➠  *' + commit.message + '*   ↱ ' + commit.author_name + ' ↲\n';
-                    }
-                );
-        const buttons = [
-        { buttonId: 'id2', buttonText: { displayText: '♥️♥️♥️' }, type: 1 },
-        { buttonId: 'id3', buttonText: { displayText: '⚡⚡⚡' }, type: 1 },
-        ]
-    const { imageMessage } = await conn.prepareMessageMedia(fs.readFileSync('./uploads/image/Shadow.jpg'), MessageType.image);
-    const buttonMessage = {
-        contentText: '╭──────────────────────────╮\n│➣ 𝐁𝐨𝐭 𝐒𝐭𝐚𝐫𝐭𝐞𝐝  \n│\n```│' + shadowupdate + '│\n│ ☞ 𝚃𝚢𝚙𝚎 .𝐮𝐩𝐝𝐚𝐭𝐞 𝐧𝐨𝐰 𝚝𝚘 𝚄𝚙𝚍𝚊𝚝𝚎 𝚈𝚘𝚞𝚛 𝙱𝚘𝚝\n╰──────────────────────────╯\n◩ 𝐂𝐨𝐝𝐞𝐝 𝐁𝐲 𝐒𝐡𝐚𝐝𝐨𝐰\n╭──────────────────────────╮\n➣ 𝐂𝐨𝐧𝐭𝐚𝐜𝐭 𝐎𝐰𝐧𝐞𝐫...\n✆ wa.me/919526808481?text=Hi\n╰──────────────────────────╯',
-        footerText: '2021 © SHADOW',
-        buttons: buttons,
-        headerType: 4,
-        imageMessage: imageMessage
-    }
-await conn.sendMessage(conn.user.jid, buttonMessage, MessageType.buttonsMessage
-                ); 
-            } 
-      }
+function _0x19a4(_0x40e439,_0x5b686d){const _0x2d7310=_0x2d73();return _0x19a4=function(_0x19a4de,_0x475936){_0x19a4de=_0x19a4de-0x1a3;let _0x4d5be7=_0x2d7310[_0x19a4de];return _0x4d5be7;},_0x19a4(_0x40e439,_0x5b686d);}const _0x2d62e4=_0x19a4;(function(_0x171d1b,_0x1fe976){const _0x50cbce=_0x19a4,_0x4d318b=_0x171d1b();while(!![]){try{const _0x52e190=-parseInt(_0x50cbce(0x1ac))/0x1+-parseInt(_0x50cbce(0x1c1))/0x2+parseInt(_0x50cbce(0x1af))/0x3*(-parseInt(_0x50cbce(0x1c8))/0x4)+parseInt(_0x50cbce(0x1b7))/0x5*(parseInt(_0x50cbce(0x1aa))/0x6)+-parseInt(_0x50cbce(0x1bc))/0x7*(-parseInt(_0x50cbce(0x1a5))/0x8)+parseInt(_0x50cbce(0x1c6))/0x9*(parseInt(_0x50cbce(0x1a9))/0xa)+parseInt(_0x50cbce(0x1bd))/0xb;if(_0x52e190===_0x1fe976)break;else _0x4d318b['push'](_0x4d318b['shift']());}catch(_0x33886a){_0x4d318b['push'](_0x4d318b['shift']());}}}(_0x2d73,0x8f005));if(config[_0x2d62e4(0x1a3)]=='EN'||config[_0x2d62e4(0x1a3)]=='ML'){await git['fetch']();var commits=await git[_0x2d62e4(0x1c2)]([config[_0x2d62e4(0x1c0)]+_0x2d62e4(0x1ad)+config['BRANCH']]);if(commits[_0x2d62e4(0x1c7)]===0x0){const buttons=[{'buttonId':_0x2d62e4(0x1b8),'buttonText':{'displayText':'♥️♥️♥️'},'type':0x1}],{imageMessage}=await conn[_0x2d62e4(0x1a8)](fs['readFileSync']('./uploads/image/Shadow.jpg'),MessageType[_0x2d62e4(0x1c4)]),buttonMessage={'contentText':_0x2d62e4(0x1b1)+Lang[_0x2d62e4(0x1ba)]+_0x2d62e4(0x1c5),'footerText':_0x2d62e4(0x1b4),'buttons':buttons,'headerType':0x4,'imageMessage':imageMessage};await conn[_0x2d62e4(0x1b9)](conn['user'][_0x2d62e4(0x1b5)],buttonMessage,MessageType[_0x2d62e4(0x1b3)]);}else{var shadowupdate=Lang[_0x2d62e4(0x1ae)];commits[_0x2d62e4(0x1b2)][_0x2d62e4(0x1b6)](_0x38972b=>{const _0x376a98=_0x2d62e4;shadowupdate+=_0x376a98(0x1bf)+_0x38972b[_0x376a98(0x1a4)]['substring'](0x0,0xa)+_0x376a98(0x1ab)+_0x38972b['message']+'*\x20\x20\x20↱\x20'+_0x38972b['author_name']+_0x376a98(0x1c3);});const buttons=[{'buttonId':'id2','buttonText':{'displayText':_0x2d62e4(0x1c9)},'type':0x1},{'buttonId':_0x2d62e4(0x1a7),'buttonText':{'displayText':_0x2d62e4(0x1b0)},'type':0x1}],{imageMessage}=await conn['prepareMessageMedia'](fs[_0x2d62e4(0x1a6)]('./uploads/image/Shadow.jpg'),MessageType[_0x2d62e4(0x1c4)]),buttonMessage={'contentText':'╭──────────────────────────╮\x0a│➣\x20𝐁𝐨𝐭\x20𝐒𝐭𝐚𝐫𝐭𝐞𝐝\x20\x20\x0a│\x0a```│'+shadowupdate+_0x2d62e4(0x1bb),'footerText':_0x2d62e4(0x1b4),'buttons':buttons,'headerType':0x4,'imageMessage':imageMessage};await conn[_0x2d62e4(0x1b9)](conn[_0x2d62e4(0x1be)]['jid'],buttonMessage,MessageType[_0x2d62e4(0x1b3)]);}}function _0x2d73(){const _0x1b1f17=['464825ASJUnJ','..origin/','NEW_UPDATE','87ugfKtV','⚡⚡⚡','╭─────────────────────────╮\x0a│➣\x20𝐁𝐨𝐭\x20𝐒𝐭𝐚𝐫𝐭𝐞𝐝\x20\x20\x0a│\x0a│◩\x20','all','buttonsMessage','2021\x20©\x20SHADOW','jid','map','718430fqbLuJ','id4','sendMessage','UPDATE','│\x0a│\x20☞\x20𝚃𝚢𝚙𝚎\x20.𝐮𝐩𝐝𝐚𝐭𝐞\x20𝐧𝐨𝐰\x20𝚝𝚘\x20𝚄𝚙𝚍𝚊𝚝𝚎\x20𝚈𝚘𝚞𝚛\x20𝙱𝚘𝚝\x0a╰──────────────────────────╯\x0a◩\x20𝐂𝐨𝐝𝐞𝐝\x20𝐁𝐲\x20𝐒𝐡𝐚𝐝𝐨𝐰\x0a╭──────────────────────────╮\x0a➣\x20𝐂𝐨𝐧𝐭𝐚𝐜𝐭\x20𝐎𝐰𝐧𝐞𝐫...\x0a✆\x20wa.me/919526808481?text=Hi\x0a╰──────────────────────────╯','4739bCrXIg','1167892AsZwsK','user','│➩\x20[','BRANCH','1025366kGjihM','log','\x20↲\x0a','image','\x0a│\x0a│\x20☞\x20𝚃𝚢𝚙𝚎\x20.𝐥𝐢𝐬𝐭\x20𝙵𝚘𝚛\x20𝙲𝚘𝚖𝚖𝚊𝚗𝚍\x20𝙻𝚒𝚜𝚝\x0a╰─────────────────────────╯\x0a◩\x20𝐂𝐨𝐝𝐞𝐝\x20𝐁𝐲\x20𝐒𝐡𝐚𝐝𝐨𝐰\x0a╭─────────────────────────╮\x0a➣\x20𝐂𝐨𝐧𝐭𝐚𝐜𝐭\x20𝐎𝐰𝐧𝐞𝐫...\x0a✆\x20wa.me/919526808481?text=Hi\x0a╰─────────────────────────╯','9593739AVCGwB','total','12844ikKrrg','♥️♥️♥️','LANG','date','4024agefiv','readFileSync','id3','prepareMessageMedia','10UTzjoK','6uqVveA',']\x20➠\x20\x20*'];_0x2d73=function(){return _0x1b1f17;};return _0x2d73();}
         });
     
     conn.on('chat-update', async m => {
