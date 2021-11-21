@@ -3,7 +3,7 @@ re-editted by Shadow
 Shadow-Bot
 */
 
-const MyPnky = require('../events');
+const Shadow = require('../events');
 const Config = require('../config');
 const {MessageType} = require('@adiwajshing/baileys');
 const fs = require("fs")
@@ -16,11 +16,11 @@ const Lang = Language.getString('_asena');
 if (Config.STANDPLK == 'off') {
 if (Config.MENUTYPE == 'one') {
 
-MyPnky.addCommand({pattern: 'list ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+Shadow.addCommand({pattern: 'list ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
 var url = await axios.get(Spark.THUMBNAIL, { responseType: 'arraybuffer' })
     var CMD_HELP = '';
     if (match[1] === '') {
-        MyPnky.commands.map(
+        Shadow.commands.map(
             async (command) =>  {
                 if (command.dontAddCommandList || command.pattern === undefined) return;
                 try {
@@ -49,7 +49,7 @@ var url = await axios.get(Spark.THUMBNAIL, { responseType: 'arraybuffer' })
         );    
     } else {
         var CMD_HELP = '';
-        MyPnky.commands.map(
+        Shadow.commands.map(
             async (command) =>  {
                 if (command.dontAddCommandList || command.pattern === undefined) return;
                 try {
@@ -83,11 +83,11 @@ var url = await axios.get(Spark.THUMBNAIL, { responseType: 'arraybuffer' })
 }
 else if (Config.MENUTYPE == 'two') {
 
-MyPnky.addCommand({pattern: 'list ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+Shadow.addCommand({pattern: 'list ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
 var url = await axios.get(Spark.THUMBNAIL, { responseType: 'arraybuffer' })
     var CMD_HELP = '';
     if (match[1] === '') {
-        MyPnky.commands.map(
+        Shadow.commands.map(
             async (command) =>  {
                 if (command.dontAddCommandList || command.pattern === undefined) return;
                 try {
@@ -116,7 +116,7 @@ var url = await axios.get(Spark.THUMBNAIL, { responseType: 'arraybuffer' })
         );    
     } else {
         var CMD_HELP = '';
-        MyPnky.commands.map(
+        Shadow.commands.map(
             async (command) =>  {
                 if (command.dontAddCommandList || command.pattern === undefined) return;
                 try {
