@@ -141,7 +141,7 @@ const buttons = [
         headerType: 4,
         imageMessage: imageMessage
     }
-       await conn.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage
+       await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage
              );    
     } else {
         var CMD_HELP = '';
