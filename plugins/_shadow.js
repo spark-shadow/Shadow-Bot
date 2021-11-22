@@ -103,8 +103,8 @@ var url = await axios.get(Spark.THUMBNAIL, { responseType: 'arraybuffer' })
                 } else {
                     HANDLER = '.';
                 }
-                CMD_HELP += '│❐ ' + (match.length >= 3 ? (HANDLER + match[2]) : command.pattern) + (command.desc === '' ? '\n' : '\n\n');
-                if (command.desc !== '') CMD_HELP += '│➣ ' + command.desc + (command.warn === '' ? '\n' : '\n\n');
+                CMD_HELP += '│❐ ' + (match.length >= 3 ? (HANDLER + match[2]) : command.pattern) + (command.desc === '' ? '\n\n' : '\n');
+                if (command.desc !== '') CMD_HELP += '│➣ ' + command.desc + (command.warn === '' ? '\n\n' : '\n');
                 if (command.usage !== '') CMD_HELP += '│➩ ' + command.usage + '\n\n';
                 if (command.warn !== '') CMD_HELP += '│☞ ' + command.warn + '\n\n';
 
@@ -133,8 +133,8 @@ var url = await axios.get(Spark.THUMBNAIL, { responseType: 'arraybuffer' })
                     } else {
                         HANDLER = '.';
                     }
-                    CMD_HELP += '│❐ ' + (cmatch.length >= 3 ? (HANDLER + cmatch[2]) : command.pattern) + (command.desc === '' ? '\n' : '\n\n');
-                    if (command.desc !== '') CMD_HELP += '│➣ ' + command.desc + (command.warn === '' ? '\n' : '\n\n');
+                    CMD_HELP += '│❐ ' + (cmatch.length >= 3 ? (HANDLER + cmatch[2]) : command.pattern) + (command.desc === '' ? '\n\n' : '\n');
+                    if (command.desc !== '') CMD_HELP += '│➣ ' + command.desc + (command.warn === '' ? '\n\n' : '\n');
                     if (command.usage !== '') CMD_HELP += '│➩ ' + command.usage + '\n\n';
                     if (command.warn !== '') CMD_HELP += '│☞ ' + command.warn + '\n\n';
 
