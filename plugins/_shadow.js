@@ -129,6 +129,6 @@ var url = await axios.get(Spark.THUMBNAIL, { responseType: 'arraybuffer' })
         }
       }
 }});
-}));
+});
 }
 }
