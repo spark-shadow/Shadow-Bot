@@ -15,5 +15,5 @@ module.exports = {
  PHONE: process.env.NUMBER === undefined ? '919526808481' : process.env.NUMBER,   
  OA_NAME: process.env.DEPLOYER === undefined ? 'undefined' : process.env.DEPLOYER,    
  THUMBNAIL: process.env.THUMBNAIL_URL === undefined ? 'https://i.imgur.com/xsKCqwZ.jpeg' : process.env.THUMBNAIL_URL,
- VERIFY: process.env.VERIFICATION_CAPTION === undefined ? '[Shadow Bot] Coded by @SPARK-SHADOW' : process.env.VERIFICATION_CAPTION,
+ VERIFY: process.env.VERIFICATION_CAPTION === undefined ? '[Shadow Bot]\nCoded by @SPARK-SHADOW' : process.env.VERIFICATION_CAPTION,
 };
