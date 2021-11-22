@@ -128,7 +128,7 @@ var url = await axios.get(Spark.THUMBNAIL, { responseType: 'arraybuffer' })
            "sellerJid": '919526808481@s.whatsapp.net' 
         }
       }
-}});
 });
+}));
 }
 }
