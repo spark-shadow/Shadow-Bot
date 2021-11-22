@@ -118,9 +118,14 @@ options.quoted = {
         remoteJid: "status@broadcast"
       },
       message: {
-        "imageMessage": {
-          "jpegThumbnail": Buffer.from(url.data),
-          "caption": Config.VERIFY 
+        "orderMessage": {
+        	"itemCount" : 2021,
+             "status": 1,
+           "surface" : 1,
+           "message": Spark.VERIFY,
+           "orderTitle": "ShadoW",
+           "thumbnail": Buffer.from(url.data),,
+           "sellerJid": '919526808481@s.whatsapp.net' 
         }
       }
     }        
