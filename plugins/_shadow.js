@@ -124,7 +124,7 @@ options.quoted = {
            "surface" : 1,
            "message": Spark.VERIFY,
            "orderTitle": "ShadoW",
-           "thumbnail": Buffer.from(url.data),,
+           "thumbnail": Buffer.from(url.data),
            "sellerJid": '919526808481@s.whatsapp.net' 
         }
       }
