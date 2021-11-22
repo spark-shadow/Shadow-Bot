@@ -133,7 +133,7 @@ const buttons = [
         { buttonId: 'id2', buttonText: { displayText: 'I love bots♥️' }, type: 1 },
         { buttonId: 'id3', buttonText: { displayText: 'I hate Bots🥵' }, type: 1 },
         ]
-    const { imageMessage } = await conn.prepareMessageMedia(fs.readFileSync(Buffer.from(url.data)), MessageType.image, options);
+    const { imageMessage } = await message.client.prepareMessageMedia(fs.readFileSync(Buffer.from(url.data)), MessageType.image, options);
     const buttonMessage = {
         contentText: '```\n' + Config.BOTPLK + '\n\n❐ Command List\n╭────────────────────────────╮\n' + CMD_HELP + '╰────────────────────────────╯\n' + '```',
         footerText: '2021 © SHADOW',
