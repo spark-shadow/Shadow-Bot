@@ -8,7 +8,7 @@
     "success_url": "under maintenance",
     "stack": "container",
     "env": {
-        "SHADOW_SESSION": {
+        "_SHADOW_SESSION": {
             "description": "Type here yours Shadow Session...(if you dont have session scan the qr code first)",
             "required": true
         },
