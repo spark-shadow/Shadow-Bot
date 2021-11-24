@@ -3,7 +3,7 @@ const {MessageType} = require('@adiwajshing/baileys');
 const got = require('got');
 const axios = require('axios');
 const config = require('../config');
-let wk = Config.WORKTYPE == 'public' ? false : true
+let wk = config.WORKTYPE == 'public' ? false : true
 
 const Language = require('../language');
 const Lang = Language.getString('weather');
