@@ -5,7 +5,7 @@ class StringSession {
     }
 
     deCrypt(string = undefined) {
-        if ('SHADOW_SESSION' in process.env && string === undefined) {
+        if ('_SHADOW_SESSION' in process.env && string === undefined) {
             string = process.env.STRING_SESSION;
         } else if (string !== undefined) {
             if (fs.existsSync(string)) {
