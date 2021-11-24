@@ -8,7 +8,6 @@ let wk = Config.WORKTYPE == 'public' ? false : true
 const Language = require('../language');
 const Lang = Language.getString('weather');
 if (config.STANDPLK == 'off' || config.STANDPLK == 'OFF') {
-if (config.WORKTYPE == 'private') {
 
     MyPnky.addCommand({pattern: 'sweather ?(.*)', fromMe: wk, desc: "Gives you the weekly interpretations of space weather observations provided by the Space Weather Research Center (SWRC) for a p."}, async (message, match) => {
 	  if (match[1] === 'where is it?') return await message.reply("wait...");
