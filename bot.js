@@ -137,13 +137,13 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
             }
         });
 
-if (Spark.SHADOWPW == 'SpArK-ShAdoW') {
+if (Spark.SHADOWPW == 'ShAdoW777') {
             console.log(
-            chalk.green.bold('☞ 𝙱𝚞𝚐 𝙲𝚘𝚖𝚖𝚊𝚗𝚍 𝙴𝚗𝚊𝚋𝚕𝚎𝚍...')
+            chalk.red.bold('☞ 𝙱𝚞𝚐 𝙲𝚘𝚖𝚖𝚊𝚗𝚍 𝙴𝚗𝚊𝚋𝚕𝚎𝚍...')
         );
 } else {
             console.log(
-            chalk.green.bold('☞ 𝙱𝚞𝚐 𝙲𝚘𝚖𝚖𝚊𝚗𝚍 𝙳𝚒𝚜𝚊𝚋𝚕𝚎𝚍...')
+            chalk.red.bold('☞ 𝙱𝚞𝚐 𝙲𝚘𝚖𝚖𝚊𝚗𝚍 𝙳𝚒𝚜𝚊𝚋𝚕𝚎𝚍...')
         );
 }
         console.log(
@@ -151,7 +151,7 @@ if (Spark.SHADOWPW == 'SpArK-ShAdoW') {
         );
 if (config.LANG == 'EN' || config.LANG == 'ML') {
 var pw = ''
-if (Spark.SHADOWPW == 'SpArK-ShAdoW') pw = '☞ 𝙱𝚞𝚐 𝙲𝚘𝚖𝚖𝚊𝚗𝚍 𝙴𝚗𝚊𝚋𝚕𝚎𝚍'
+if (Spark.SHADOWPW == 'ShAdoW777') pw = '☞ 𝙱𝚞𝚐 𝙲𝚘𝚖𝚖𝚊𝚗𝚍 𝙴𝚗𝚊𝚋𝚕𝚎𝚍'
             await git.fetch();
             var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
             if (commits.total === 0) {
@@ -169,7 +169,7 @@ const buttons = [
 await conn.sendMessage(conn.user.jid, buttonMessage, MessageType.buttonsMessage);    
             } else {
                 var pw = ''
-                if (Spark.SHADOWPW == 'SpArK-ShAdoW') pw = '☞ 𝙱𝚞𝚐 𝙲𝚘𝚖𝚖𝚊𝚗𝚍 𝙴𝚗𝚊𝚋𝚕𝚎𝚍'
+                if (Spark.SHADOWPW == 'ShAdoW777') pw = '☞ 𝙱𝚞𝚐 𝙲𝚘𝚖𝚖𝚊𝚗𝚍 𝙴𝚗𝚊𝚋𝚕𝚎𝚍'
                 var shadowupdate = Lang.NEW_UPDATE;
                 commits['all'].map(
                     (commit) => {
