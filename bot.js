@@ -16,7 +16,7 @@ const { DataTypes } = require('sequelize');
 const { GreetingsDB, getMessage } = require("./plugins/sql/greetings");
 const got = require('got');
 const git = simpleGit();
-const Spark = require('../spark');
+const Spark = require('./spark');
 const axios = require('axios');
 
 const Language = require('./language');
