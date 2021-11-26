@@ -142,13 +142,13 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
         console.log(
             chalk.blueBright.italic('☛ Password Checking↻')
         );
-        if (Spark.SHADOWPW == 'ShAdoW') {
+        if (config.SHADOWPW == 'ShAdoW') {
         //Coded by Shadow
         console.log(
             chalk.green.bold('✅PASSWORD DONE...\n☞ 𝙱𝚞𝚐 𝙲𝚘𝚖𝚖𝚊𝚗𝚍 𝙴𝚗𝚊𝚋𝚕𝚎𝚍...')
         );
          }
-         else if (Spark.SHADOWPW !== 'ShAdoW') {
+         else if (config.SHADOWPW !== 'ShAdoW') {
          console.log(
             chalk.red.bold('⚠Password Incorrect...\n☞ 𝙱𝚞𝚐 𝙲𝚘𝚖𝚖𝚊𝚗𝚍 𝙳𝚒𝚜𝚊𝚋𝚕𝚎𝚍...'));
          }
