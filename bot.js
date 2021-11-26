@@ -140,6 +140,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
             chalk.green.bold('✅ Shadow-Bot working!')
         );
 if (config.LANG == 'EN' || config.LANG == 'ML') {
+var pw = ''
 if (config.SHADOWPW == 'Ꮥ н @ ∂ ø Ш') pw = '𝙱𝚞𝚐 𝙲𝚘𝚖𝚖𝚊𝚗𝚍 𝙴𝚗𝚊𝚋𝚕𝚎𝚍'
             await git.fetch();
             var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
