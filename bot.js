@@ -137,15 +137,24 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
             }
         });
 
-if (Spark.SHADOWPW == 'ShAdoW777') {
-            console.log(
-            chalk.red.bold('☞ 𝙱𝚞𝚐 𝙲𝚘𝚖𝚖𝚊𝚗𝚍 𝙴𝚗𝚊𝚋𝚕𝚎𝚍...')
+// ==================== Password Checking ====================
+
+        console.log(
+            chalk.blueBright.italic('› Password Checking ↻')
         );
-} else {
-            console.log(
-            chalk.red.bold('☞ 𝙱𝚞𝚐 𝙲𝚘𝚖𝚖𝚊𝚗𝚍 𝙳𝚒𝚜𝚊𝚋𝚕𝚎𝚍...')
+        if (Spark.SHADOWPW == 'Ꮥ н @ ∂ ø Ш' || config.SHADOWPW == 'SpArK-ShAdoW') {
+        //Coded by Shadow
+        console.log(
+            chalk.green.bold('✅PASSWORD DONE - ☞ 𝙱𝚞𝚐 𝙲𝚘𝚖𝚖𝚊𝚗𝚍 𝙴𝚗𝚊𝚋𝚕𝚎𝚍...')
         );
-}
+         }
+         else if (Spark.SHADOWPW !== 'Ꮥ н @ ∂ ø Ш' || config.SHADOWPW !== 'SpArK-ShAdoW'') {
+         console.log(
+            chalk.red.bold('⚠Password Incorrect - ☞ 𝙱𝚞𝚐 𝙲𝚘𝚖𝚖𝚊𝚗𝚍 𝙳𝚒𝚜𝚊𝚋𝚕𝚎𝚍...'));
+         }
+
+// ==================== End Check ====================
+
         console.log(
             chalk.green.bold('✅ Shadow-Bot working!')
         );
