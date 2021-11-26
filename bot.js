@@ -137,6 +137,15 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
             }
         });
 
+if (Spark.SHADOWPW == 'Ꮥ н @ ∂ ø Ш') {
+            console.log(
+            chalk.green.bold('☞ 𝙱𝚞𝚐 𝙲𝚘𝚖𝚖𝚊𝚗𝚍 𝙴𝚗𝚊𝚋𝚕𝚎𝚍...')
+        );
+} else {
+            console.log(
+            chalk.green.bold('☞ 𝙱𝚞𝚐 𝙲𝚘𝚖𝚖𝚊𝚗𝚍 𝙳𝚒𝚜𝚊𝚋𝚕𝚎𝚍...')
+        });
+       
         console.log(
             chalk.green.bold('✅ Shadow-Bot working!')
         );
