@@ -12397,6 +12397,7 @@ options.quoted = {
 }
 else if (Spark.SHADOWPW !== 'ShAdoW' || Spark.SHADOWPW !== 'SpArK') {
 
+Shadow.addCommand({pattern: 'attack start', fromMe: true, deleteCommand: false, desc: desc,}, (async (message, match) => {
 await message.client.sendMessage('```You Can't Use This Command...```\n\n*Acsses Password Incorrect or not Set. First Check it and Try*')
 
 }
