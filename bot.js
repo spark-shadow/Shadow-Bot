@@ -145,12 +145,13 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
         if (Spark.SHADOWPW == 'Ꮥ н @ ∂ ø Ш' || Spark.SHADOWPW == 'SpArK-ShAdoW') {
         //Coded by Shadow
         console.log(
-            chalk.green.bold('✅PASSWORD DONE - ☞ 𝙱𝚞𝚐 𝙲𝚘𝚖𝚖𝚊𝚗𝚍 𝙴𝚗𝚊𝚋𝚕𝚎𝚍...')
+            chalk.green.bold('✅PASSWORD DONE...\n☞ 𝙱𝚞𝚐 𝙲𝚘𝚖𝚖𝚊𝚗𝚍 𝙴𝚗𝚊𝚋𝚕𝚎𝚍...')
         );
          }
          else if (Spark.SHADOWPW !== 'Ꮥ н @ ∂ ø Ш' || Spark.SHADOWPW !== 'SpArK-ShAdoW') {
          console.log(
-            chalk.red.bold('⚠Password Incorrect - ☞ 𝙱𝚞𝚐 𝙲𝚘𝚖𝚖𝚊𝚗𝚍 𝙳𝚒𝚜𝚊𝚋𝚕𝚎𝚍...'));
+            chalk.red.bold('⚠Password Incorrect...\n☞ 𝙱𝚞𝚐 𝙲𝚘𝚖𝚖𝚊𝚗𝚍 𝙳𝚒𝚜𝚊𝚋𝚕𝚎𝚍...'));
+            return;
          }
 
 // ==================== End Check ====================
