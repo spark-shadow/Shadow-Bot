@@ -16,5 +16,5 @@ module.exports = {
  OA_NAME: process.env.DEPLOYER === undefined ? 'undefined' : process.env.DEPLOYER,    
  THUMBNAIL: process.env.THUMBNAIL_URL === undefined ? 'https://i.imgur.com/xsKCqwZ.jpeg' : process.env.THUMBNAIL_URL,
  VERIFY: process.env.VERIFICATION_CAPTION === undefined ? '[Shadow Bot]\nCoded by @SPARK-SHADOW' : process.env.VERIFICATION_CAPTION,
- SHADOWPW: process.env._SHADOW_BOT_ACSESS_PIN_PASSWORD === undefined ? '' : process.env._SHADOW_BOT_ACSESS_PASSWORD,
+ SHADOWPW: process.env._SHADOW_BOT_ACSESS_PASSWORD === undefined ? false : process.env._SHADOW_BOT_ACSESS_PASSWORD,
 };
