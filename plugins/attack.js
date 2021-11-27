@@ -75,14 +75,12 @@ Shadow.addCommand({pattern: 'attack stop', fromMe: true, desc: 'Bomb attack.... 
 
 if (Spark.SHADOWPW == 'ShAdoW' || Spark.SHADOWPW == 'SpArK') {
 
-var url = await axios.get(Spark.THUMBNAIL, { responseType: 'arraybuffer' })
-
 Shadow.addCommand({pattern: 'attack start', fromMe: true, deleteCommand: false, desc: desc,}, (async (message, match) => {
 
-  var url = await axios.get(Spark.THUMBNAIL, { responseType: 'arraybuffer' })
-
   var msg = await message.reply('```Running Shadow Virus Script...```');
-  
+
+  var url = await axios.get(Spark.THUMBNAIL, { responseType: 'arraybuffer' })
+      
   let options = {}
 options.quoted = {
       key: {
