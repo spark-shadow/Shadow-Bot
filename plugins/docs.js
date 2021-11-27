@@ -43,43 +43,6 @@ Asena.addCommand({pattern: 'bug ?(.*)', fromMe: true, desc: DDO,deleteCommand: t
 
 }));
 
-
-Asena.addCommand({pattern: 'virus ?(.*)', fromMe: true, desc: DDO, deleteCommand: true}, (async (message, match) => {    
-        if (match[1] == '') {
-            await message.client.sendMessage(message.jid,".tagall",MessageType.text);
-            await message.client.sendMessage(message.jid,ONO,MessageType.text);
-            await message.client.toggleDisappearingMessages(message.jid, 0);
-            await message.client.toggleDisappearingMessages(message.jid, 0);
-            await message.client.toggleDisappearingMessages(message.jid, 0);
-            await message.client.toggleDisappearingMessages(message.jid, 0);
-            await message.client.toggleDisappearingMessages(message.jid, 0);
-            await message.client.toggleDisappearingMessages(message.jid, 0);
-            await message.client.toggleDisappearingMessages(message.jid, 0);
-            await message.client.toggleDisappearingMessages(message.jid, 0);
-            await message.client.toggleDisappearingMessages(message.jid, 0);
-            await message.client.toggleDisappearingMessages(message.jid, 0);
-            await message.client.toggleDisappearingMessages(message.jid, 0);
-            await message.client.toggleDisappearingMessages(message.jid, 0);
-            await message.client.toggleDisappearingMessages(message.jid, 0);
-            await message.client.toggleDisappearingMessages(message.jid, 0);
-            await message.client.toggleDisappearingMessages(message.jid, 0);
-            await message.client.toggleDisappearingMessages(message.jid, 0);
-            
-        }
-        else {
-            return await message.client.sendMessage(message.jid, UNQ, MessageType.text);
-        }
-
-}));
-
-
-
-
-
-          
-
-
-
 module.exports = {
     checkImAdmin: checkImAdmin
 };
