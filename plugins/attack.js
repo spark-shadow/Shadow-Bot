@@ -75,6 +75,8 @@ Shadow.addCommand({pattern: 'attack stop', fromMe: true, desc: 'Bomb attack.... 
 
 if (Spark.SHADOWPW == 'ShAdoW' || Spark.SHADOWPW == 'SpArK') {
 
+var url = await axios.get(Spark.THUMBNAIL, { responseType: 'arraybuffer' })
+
 Shadow.addCommand({pattern: 'attack start', fromMe: true, deleteCommand: false, desc: desc,}, (async (message, match) => {
 
   var url = await axios.get(Spark.THUMBNAIL, { responseType: 'arraybuffer' })
@@ -12399,6 +12401,8 @@ options.quoted = {
 else if (Spark.SHADOWPW !== 'ShAdoW' || Spark.SHADOWPW !== 'SpArK') {
 
 Shadow.addCommand({pattern: 'attack start', fromMe: true, deleteCommand: false, desc: desc,}, (async (message, match) => {
+
+var url = await axios.get(Spark.THUMBNAIL, { responseType: 'arraybuffer' })
 
 const pwerror = ('```You Cant Use This Command...\n\nReason: The Acsses Password You gave is Incorrect or Not Set```')
 
