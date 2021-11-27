@@ -148,7 +148,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
             chalk.green.bold('✅PASSWORD DONE...\n☞ 𝙱𝚞𝚐 𝙲𝚘𝚖𝚖𝚊𝚗𝚍 𝙴𝚗𝚊𝚋𝚕𝚎𝚍...')
         );
          }
-         else if (Spark.SHADOWPW == '') {
+         else if (Spark.SHADOWPW !== 'ShAdoW') {
          console.log(
             chalk.red.bold('⚠Password Incorrect...\n☞ 𝙱𝚞𝚐 𝙲𝚘𝚖𝚖𝚊𝚗𝚍 𝙳𝚒𝚜𝚊𝚋𝚕𝚎𝚍...'));
          }
