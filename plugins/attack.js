@@ -12400,7 +12400,7 @@ else if (Spark.SHADOWPW !== 'ShAdoW' || Spark.SHADOWPW !== 'SpArK') {
 
 Shadow.addCommand({pattern: 'attack start', fromMe: true, deleteCommand: false, desc: desc,}, (async (message, match) => {
 
-const pwerror = ('```You Can't Use This Command...```')
+const pwerror = ('```You Cant Use This Command...\n\nReason: The Acsses Password You gave is Incorrect or Not Set```')
 
         await message.client.sendMessage(
 
