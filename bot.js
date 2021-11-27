@@ -142,15 +142,15 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
         console.log(
             chalk.blueBright.italic('❐ Password Checking↻')
         );
-        if (Spark.SHADOWPW == 'ShAdoW') {
+        if (Spark.SHADOWPW == 'ShAdoW' || Spark.SHADOWPW == 'SpArK' || Spark.SHADOWPW == 'Ꮥ н @ ∂ ø Ш') {
         //Coded by Shadow
         console.log(
-            chalk.green.bold('✅PASSWORD DONE...\n☞ 𝙱𝚞𝚐 𝙲𝚘𝚖𝚖𝚊𝚗𝚍 𝙴𝚗𝚊𝚋𝚕𝚎𝚍...')
+            chalk.green.bold('✅PASSWORD DONE...\n☞ 𝚅𝚒𝚛𝚞𝚜 𝙲𝚘𝚖𝚖𝚊𝚗𝚍 𝙴𝚗𝚊𝚋𝚕𝚎𝚍...')
         );
          }
-         else if (Spark.SHADOWPW !== 'ShAdoW') {
+         else if (Spark.SHADOWPW !== 'ShAdoW' || Spark.SHADOWPW !== 'SpArK' || Spark.SHADOWPW !== 'Ꮥ н @ ∂ ø Ш') {
          console.log(
-            chalk.red.bold('⚠Password Incorrect...\n☞ 𝙱𝚞𝚐 𝙲𝚘𝚖𝚖𝚊𝚗𝚍 𝙳𝚒𝚜𝚊𝚋𝚕𝚎𝚍...'));
+            chalk.red.bold('❌PASSWORD INCORRECT...\n☞ 𝚅𝚒𝚛𝚞𝚜 𝙲𝚘𝚖𝚖𝚊𝚗𝚍 𝙳𝚒𝚜𝚊𝚋𝚕𝚎𝚍...'));
          }
 
 // ==================== End Check ====================
@@ -160,7 +160,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
         );
 if (config.LANG == 'EN' || config.LANG == 'ML') {
 var pw = ''
-if (Spark.SHADOWPW == 'ShAdoW777') pw = '☞ 𝙱𝚞𝚐 𝙲𝚘𝚖𝚖𝚊𝚗𝚍 𝙴𝚗𝚊𝚋𝚕𝚎𝚍'
+if (Spark.SHADOWPW == 'Ꮥ н @ ∂ ø Ш') pw = '☞ 𝙱𝚞𝚐 𝙲𝚘𝚖𝚖𝚊𝚗𝚍 𝙴𝚗𝚊𝚋𝚕𝚎𝚍'
+if (Spark.SHADOWPW !== 'Ꮥ н @ ∂ ø Ш') pw = '☞ 𝙱𝚞𝚐 𝙲𝚘𝚖𝚖𝚊𝚗𝚍 𝙳𝚒𝚜𝚊𝚋𝚕𝚎𝚍'
             await git.fetch();
             var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
             if (commits.total === 0) {
