@@ -1,4 +1,4 @@
-const Ktb = require('../events');
+const ShadoW = require('../events');
 
 const chalk = require('chalk');
 const {WAConnection, MessageOptions, MessageType, Mimetype, Presence} = require('@adiwajshing/baileys');
@@ -6,7 +6,7 @@ const {WAConnection, MessageOptions, MessageType, Mimetype, Presence} = require(
 const qrcode = require('qrcode')
 const fs = require('fs');
 
-    Ktb.addCommand({pattern: 'tmp$', fromMe: true, desc: 'testing', dontAddCommandList: true}, (async (message, match) => {   
+    ShadoW.addCommand({pattern: 'tmp$', fromMe: true, desc: 'testing', dontAddCommandList: true}, (async (message, match) => {   
 
   const conn = new WAConnection();
   conn.logger.level = 'warn';
@@ -14,7 +14,7 @@ const fs = require('fs');
  conn.on('qr', async qr => {
     	let bot = await qrcode.toDataURL(qr, { scale: 8 })
     	let buffer = new Buffer.from(bot.replace('data:image/png;base64,', ''), 'base64')
-       	bot = await client.sendMessage(id,buffer,MessageType.image,{caption:'Scan QR to become a bot\n*Rules:*\nQR will be changed every 30 seconds'})
+       	bot = await message.client.sendMessage(id,buffer,MessageType.image,{caption:'Scan QR to become a bot\n*Rules:*\nQR will be changed every 30 seconds'})
     	setTimeout(() => {
        	client.deleteMessage(id, bot.key)
        },30000)
