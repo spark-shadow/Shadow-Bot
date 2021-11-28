@@ -498,3 +498,25 @@ let wk = Config.WORKTYPE == 'public' ? false : true
         await message.sendMessage(Buffer.from(rex.data), MessageType.image, { mimetype: Mimetype.jpg, caption: Config.AFN + '\n\n ```Coded by Shadow``` ' ,quoted: message.data})
 
     }));
+
+Ktb.addCommand({pattern: 'wasted ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+
+  
+    if (match[1] === '') return await message.client.sendMessage(message.jid,"need image url");
+
+    var webimage = await axios.get(`https://zenzapi.xyz/api/image/wasted?image=${match[1]}&apikey=whitedevil-terrorboy`, { responseType: 'arraybuffer' })
+
+  await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg , caption: '*ᴍᴀᴅᴇ ʙʏ ᴡʜɪᴛᴇ ᴅᴇᴠɪʟ*'})
+
+}));
+
+Ktb.addCommand({pattern: 'delete ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+
+  
+    if (match[1] === '') return await message.client.sendMessage(message.jid,"need image url");
+
+    var webimage = await axios.get(`https://zenzapi.xyz/api/image/delete?image=${match[1]}&apikey=whitedevil-terrorboy`, { responseType: 'arraybuffer' })
+
+  await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg , caption: '*ᴍᴀᴅᴇ ʙʏ ᴡʜɪᴛᴇ ᴅᴇᴠɪʟ*'})
+
+}));
