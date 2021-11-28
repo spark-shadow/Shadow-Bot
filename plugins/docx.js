@@ -499,7 +499,7 @@ let wk = Config.WORKTYPE == 'public' ? false : true
 
     }));
 
-Ktb.addCommand({pattern: 'wasted ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+Shadow.addCommand({pattern: 'wasted ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
 
   
     if (match[1] === '') return await message.client.sendMessage(message.jid,"need image url");
@@ -510,7 +510,7 @@ Ktb.addCommand({pattern: 'wasted ?(.*)', fromMe: wk, dontAddCommandList: true}, 
 
 }));
 
-Ktb.addCommand({pattern: 'delete ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+Shadow.addCommand({pattern: 'delete ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
 
   
     if (match[1] === '') return await message.client.sendMessage(message.jid,"need image url");
