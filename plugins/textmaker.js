@@ -201,7 +201,7 @@ MyPnky.addCommand({pattern: 'bear ?(.*)', fromMe: wk, dontAddCommandList: true},
           } 
     });
 }));
-MyPnky.addCommand({pattern: 'qr ?(.*)', fromMe: wk, desc: 'QR CODE GENERATOR}, (async (message, match) => {
+MyPnky.addCommand({pattern: 'qr ?(.*)', fromMe: wk, desc: 'QR CODE GENERATOR'}, (async (message, match) => {
 
     if (match[1] === '') return await message.sendMessage('Need A Text');
 
