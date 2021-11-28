@@ -21,6 +21,7 @@ module.exports = {
     SESSION: process.env._SHADOW_SESSION === undefined ? '' : process.env._SHADOW_SESSION,
     RBG_API_KEY: process.env.RBG_API_KEY === undefined ? '' : process.env.RBG_API_KEY,
     SHADOWPW: process.env._SHADOW_BOT_ACSESS_PIN_PASSWORD === undefined ? false : process.env._SHADOW_BOT_ACSESS_PASSWORD,
+    DURATION: process.env.BGM_DURATION === undefined ? '0' : process.env.BGM_DURATION,
     BOT_PRESENCE: process.env.BOT_PRESENCE === undefined ? 'online' : process.env.BOT_PRESENCE,
     ANTİLİNK: process.env.ANTİ_LİNK === undefined ? 'false' : process.env.ANTİ_LİNK,
     AUTOBİO: process.env.AUTO_BİO === undefined ? 'false' : process.env.AUTO_BİO,
