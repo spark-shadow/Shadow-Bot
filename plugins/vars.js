@@ -466,3 +466,21 @@ var PRE_dsc = ''
         }
 
     }));
+
+    MyPnky.addCommand({ pattern: 'duration ?(.*)', fromMe: true, desc: 'changes bgm duration', usage: '.bgmduration *9999999*' }, (async (message, match) => {
+
+        if (match[1] == '') return await message.sendMessage('NEED A NUMBER')
+
+        await heroku.patch(baseURI + '/config-vars', {
+
+            body: {
+
+                ['BGM_DURATION']: match[1]
+
+            }
+
+        });
+
+        await message.sendMessage("NEW BGM DURATION UPDATED")
+
+    }));
