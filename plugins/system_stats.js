@@ -67,7 +67,8 @@ var i = Math.floor(31*Math.random())
 	}    
 	   else {
            var url = await axios.get(Config.ALIVEURL, { responseType: 'arraybuffer' })
-           await message.client.sendMessage(message.jid, Buffer.from(url.data), MessageType.image, { caption: Config.ALIVEMSG.replace('{time}', afnplk).replace('{qt}', r_text[i])});
+           const child = spawnSync('neofetch', ['--stdout']).stdout.toString('utf-8')
+           await message.client.sendMessage(message.jid, Buffer.from(url.data), MessageType.image, { caption: Config.ALIVEMSG.replace('{time}', afnplk).replace('{qt}', r_text[i]).replace('{sysd}', '```' + child + '```')});
 	   }
     }));
 
