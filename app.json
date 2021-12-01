@@ -16,6 +16,11 @@
             "description": "𝐘𝐨𝐮 𝐜𝐚𝐧 𝐔𝐬𝐞 𝐬𝐭𝐚𝐫𝐭 𝐛𝐨𝐭 𝐰𝐢𝐭𝐡𝐨𝐮𝐭 𝐩𝐚𝐬𝐬𝐰𝐨𝐫𝐝.. 𝐁𝐮𝐭 𝐒𝐨𝐦𝐞 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬 𝐋𝐢𝐤𝐞 𝐚𝐭𝐭𝐚𝐜𝐤 , 𝐛𝐮𝐠 𝐧𝐨𝐭 𝐖𝐨𝐫𝐤 𝐰𝐢𝐭𝐡𝐨𝐮𝐭 𝐩𝐚𝐬𝐬𝐰𝐨𝐫𝐝...        (☞ 𝐢𝐟 𝐲𝐨𝐮 𝐰𝐚𝐧𝐭 𝐭𝐨 𝐮𝐬𝐞 𝐭𝐡𝐢𝐬 𝐭𝐲𝐩𝐞𝐬 𝐨𝐟 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬 𝐲𝐨𝐮 𝐰𝐚𝐧𝐭 𝐩𝐚𝐬𝐬𝐨𝐰𝐫𝐝... ✆ 𝐂𝐨𝐧𝐭𝐚𝐜𝐭 𝐒𝐡𝐚𝐝𝐨𝐰 𝐭𝐨 𝐆𝐞𝐭 𝐩𝐚𝐬𝐬𝐰𝐨𝐫𝐝 ) 𝐈𝐟 𝐘𝐨𝐮 𝐝𝐨𝐧𝐭 𝐰𝐚𝐧𝐭 𝐁𝐮𝐠 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬 𝐉𝐮𝐬𝐭 𝐥𝐞𝐚𝐯𝐞 𝐭𝐡𝐢𝐬 𝐨𝐩𝐭𝐢𝐨𝐧 𝐚𝐧𝐝 𝐄𝐧𝐣𝐨𝐲♥️",
             "required": false
         },
+        "BUTTON_TEXT": {
+            "description": "It Will Show as Button Texts.. (*Example: text1/text2*)",
+            "required": false,
+            "value": "♥️♥️♥️/⚡⚡⚡"
+        },
         "BGM_DURATION": {
              "description": "To set bgm duration",
              "required": false
