@@ -63,7 +63,7 @@ var i = Math.floor(31*Math.random())
         
         let pp
         try { pp = await message.client.getProfilePicture(message.jid.includes('-') ? message.data.participant : message.jid ); } catch { pp = await message.client.getProfilePicture(); }
-        await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => { await message.client.sendMessage(message.jid, res.data, MessageType.image, { caption: Config.ALIVEMSG.replace('{pp}', '').replace('{time}', afnplk).replace('{qt}', r_text[i])}); });
+        await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => { await message.client.sendMessage(message.jid, res.data, MessageType.image, { caption: Config.ALIVEMSG.replace('{pp}', '').replace('{time}', afnplk).replace('{qt}', r_text[i])}).replace('{sysd}', '```' + child + '```')});
 	}    
 	   else {
            var url = await axios.get(Config.ALIVEURL, { responseType: 'arraybuffer' })
@@ -71,6 +71,29 @@ var i = Math.floor(31*Math.random())
            await message.client.sendMessage(message.jid, Buffer.from(url.data), MessageType.image, { caption: Config.ALIVEMSG.replace('{time}', afnplk).replace('{qt}', r_text[i]).replace('{sysd}', '```' + child + '```')});
 	   }
     }));
+}
+  if (Config.ALIVEMSG.includes('{button}')) {
+
+  var comEmoji, descEmoji;
+  if (Spark.BUTTON_TEXT.includes('/')) {
+     var split = Spark.BUTTON_TEXT.split('/');
+         button1 = split[0];
+         button2 = split[1];
+       }
+  const buttons = [
+  {buttonId: `id1`, buttonText: {displayText: button1}, type: 1},
+  {buttonId: `id2`, buttonText: {displayText: button2}, type: 1}
+]
+const buttonMessage = {
+    contentText: Config.ALIVEMSG.replace('{time}', afnplk).replace('{qt}', r_text[i]).replace('{sysd}', '```' + child + '```')});,
+    footerText: `SHADOW © 2021`,
+    buttons: buttons,
+    headerType: 1
+  }
+}
+ await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage)
+
+}));
 
     MyPnky.addCommand({pattern: 'sysd', fromMe: wk, desc: Lang.SYSD_DESC}, (async (message, match) => {
 
