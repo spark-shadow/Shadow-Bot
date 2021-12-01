@@ -75,8 +75,8 @@ var i = Math.floor(31*Math.random())
   if (Config.ALIVEMSG.includes('{button}')) {
 
   var comEmoji, descEmoji;
-  if (Spark.BUTTON_TEXT.includes('/')) {
-     var split = Spark.BUTTON_TEXT.split('/');
+  if (Spark.BUTTON.includes('/')) {
+     var split = Spark.BUTTON.split('/');
          button1 = split[0];
          button2 = split[1];
        }
