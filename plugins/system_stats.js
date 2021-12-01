@@ -87,7 +87,7 @@ const { imageMessage } = await message.client.prepareMessageMedia(Buffer.from(ur
   {buttonId: `id2`, buttonText: {displayText: button2}, type: 1}
 ]
 const buttonMessage = {
-    contentText: Config.ALIVEMSG.replace('{button}', '').replace('{time}', afnplk).replace('{qt}', r_text[i]).replace('{sysd}', '```' + child + '```'),
+    contentText: Config.ALIVEMSG.replace('{button/url}', '').replace('{time}', afnplk).replace('{qt}', r_text[i]).replace('{sysd}', '```' + child + '```'),
     footerText: `SHADOW BOT © 2021`,
     buttons: buttons,
     headerType: 4,
@@ -116,7 +116,7 @@ const { imageMessage } = await message.client.prepareMessageMedia(res.data, Mess
   {buttonId: `id2`, buttonText: {displayText: button2}, type: 1}
 ]
 const buttonMessage = {
-    contentText: Config.ALIVEMSG.replace('{button}', '').replace('{time}', afnplk).replace('{qt}', r_text[i]).replace('{sysd}', '```' + child + '```'),
+    contentText: Config.ALIVEMSG.replace('{button/pp}', '').replace('{time}', afnplk).replace('{qt}', r_text[i]).replace('{sysd}', '```' + child + '```'),
     footerText: `SHADOW BOT © 2021`,
     buttons: buttons,
     headerType: 4,
