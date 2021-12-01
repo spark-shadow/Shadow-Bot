@@ -1,24 +1,27 @@
-/* Copyright (C) 2020 Yusuf Usta.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-WhatsAsena - Yusuf Usta
-Developer & Co-Founder - Phaticusthiccy
-re-edited by afnan plk
-*/
+// SHADOW BUTTON ALIVE MESSAGE - ©2021 By Shadow
 
-const MyPnky = require('../events');
+// Requirements
+
+const ShadoW = require('../events');
 const {MessageType,Mimetype} = require('@adiwajshing/baileys');
 const {spawnSync} = require('child_process');
 const Config = require('../config');
 const chalk = require('chalk');
 const axios = require('axios');
+const Spark = require('../spark');
+
+// const lang
 
 const Language = require('../language');
 const Lang = Language.getString('system_stats');
 let wk = Config.WORKTYPE == 'public' ? false : true
 if (Config.STANDPLK == 'off' || Config.STANDPLK == 'OFF') {
 
-MyPnky.addCommand({pattern: 'alive', fromMe: wk, desc: Lang.ALIVE_DESC}, (async (message, match) => {
+// Starting of command
+
+ShadoW.addCommand({pattern: 'alive', fromMe: wk, desc: Lang.ALIVE_DESC}, (async (message, match) => {
+
+// Vars
        
 	var plk_say = new Date().toLocaleString('HI', { timeZone: 'Asia/Kolkata' }).split(' ')[1]
         const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
@@ -64,7 +67,10 @@ var i = Math.floor(31*Math.random())
         let pp
         try { pp = await message.client.getProfilePicture(message.jid.includes('-') ? message.data.participant : message.jid ); } catch { pp = await message.client.getProfilePicture(); }
         await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => { await message.client.sendMessage(message.jid, res.data, MessageType.image, { caption: Config.ALIVEMSG.replace('{pp}', '').replace('{time}', afnplk).replace('{qt}', r_text[i])}).replace('{sysd}', '```' + child + '```')});
-	}    
+	}
+
+// Alive Buttons - ©2021 By Shadow
+    
 	  else if (Config.ALIVEMSG.includes('{button}')) {
                var comEmoji, descEmoji;
                if (Spark.BUTTON.includes('/')) {
@@ -91,7 +97,7 @@ const buttonMessage = {
 	   }
 }));
 
-    MyPnky.addCommand({pattern: 'sysd', fromMe: wk, desc: Lang.SYSD_DESC}, (async (message, match) => {
+    ShadoW.addCommand({pattern: 'sysd', fromMe: wk, desc: Lang.SYSD_DESC}, (async (message, match) => {
 
         const child = spawnSync('neofetch', ['--stdout']).stdout.toString('utf-8')
         await message.sendMessage(
