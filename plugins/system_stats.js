@@ -27,6 +27,7 @@ ShadoW.addCommand({pattern: 'alive', fromMe: wk, desc: Lang.ALIVE_DESC}, (async 
         const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
         var plk_here = new Date().toLocaleDateString(get_localized_date)
 	var afnplk = '```⏱ Time :' + plk_say + '```\n\n ```📅 Date :' + plk_here + '```'
+        var url = await axios.get(Config.ALIVEURL, { responseType: 'arraybuffer' })
 	   
 	   	     var r_text = new Array ();    
 r_text[0] = "The greatest glory in living lies not in never falling, but in rising every time we fall.\n           -Nelson Mandela";
@@ -80,15 +81,17 @@ const child = spawnSync('neofetch', ['--stdout']).stdout.toString('utf-8')
                button1 = split[0];
                button2 = split[1];
              }
+const { imageMessage } = await message.client.prepareMessageMedia(Buffer.from(url.data)), MessageType.image);
   const buttons = [
   {buttonId: `id1`, buttonText: {displayText: button1}, type: 1},
   {buttonId: `id2`, buttonText: {displayText: button2}, type: 1}
 ]
 const buttonMessage = {
     contentText: Config.ALIVEMSG.replace('{button}', '').replace('{time}', afnplk).replace('{qt}', r_text[i]).replace('{sysd}', '```' + child + '```'),
-    footerText: Spark.VERIFY,
+    footerText: SHADOW BOT © 2021,
     buttons: buttons,
-    headerType: 1
+    headerType: 4
+    imageMessage: imageMessage
 }
   await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage)
 }
