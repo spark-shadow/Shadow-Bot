@@ -70,8 +70,7 @@ var i = Math.floor(31*Math.random())
            const child = spawnSync('neofetch', ['--stdout']).stdout.toString('utf-8')
            await message.client.sendMessage(message.jid, Buffer.from(url.data), MessageType.image, { caption: Config.ALIVEMSG.replace('{time}', afnplk).replace('{qt}', r_text[i]).replace('{sysd}', '```' + child + '```')});
 	   }
-    }));
-}
+
   if (Config.ALIVEMSG.includes('{button}')) {
 
   var comEmoji, descEmoji;
@@ -89,10 +88,9 @@ const buttonMessage = {
     footerText: `SHADOW © 2021`,
     buttons: buttons,
     headerType: 1
-  }
 }
- await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage)
-
+  await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage)
+}
 }));
 
     MyPnky.addCommand({pattern: 'sysd', fromMe: wk, desc: Lang.SYSD_DESC}, (async (message, match) => {
