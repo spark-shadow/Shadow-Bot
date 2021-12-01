@@ -81,7 +81,7 @@ const child = spawnSync('neofetch', ['--stdout']).stdout.toString('utf-8')
                button1 = split[0];
                button2 = split[1];
              }
-const imageMessage = await message.client.prepareMessageMedia(Buffer.from(url.data)), MessageType.image);
+const { imageMessage } = await message.client.prepareMessageMedia(Buffer.from(url.data), MessageType.image);
   const buttons = [
   {buttonId: `id1`, buttonText: {displayText: button1}, type: 1},
   {buttonId: `id2`, buttonText: {displayText: button2}, type: 1}
