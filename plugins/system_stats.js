@@ -72,9 +72,9 @@ const child = spawnSync('neofetch', ['--stdout']).stdout.toString('utf-8')
         await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => { await message.client.sendMessage(message.jid, res.data, MessageType.image, { caption: Config.ALIVEMSG.replace('{pp}', '').replace('{time}', afnplk).replace('{qt}', r_text[i])}).replace('{sysd}', '```' + child + '```')});
 	}
 
-// Alive Buttons - ©2021 By Shadow
+// Media Button Alive - {button/url}
     
-	  else if (Config.ALIVEMSG.includes('{button}')) {
+	  else if (Config.ALIVEMSG.includes('{button/url}')) {
                var comEmoji, descEmoji;
                if (Spark.BUTTON.includes('/')) {
                var split = Spark.BUTTON.split('/');
@@ -93,6 +93,36 @@ const buttonMessage = {
     headerType: 4,
     imageMessage: imageMessage
 }
+  await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage)
+}
+
+// Media Button Alive - {button/pp} 
+
+ else if (Config.ALIVEMSG.includes('{button/url}')) {
+               var comEmoji, descEmoji;
+               if (Spark.BUTTON.includes('/')) {
+               var split = Spark.BUTTON.split('/');
+               button1 = split[0];
+               button2 = split[1];
+             }
+
+        let pp
+        try { pp = await message.client.getProfilePicture(message.jid.includes('-') ? message.data.participant : message.jid ); } catch { pp = await message.client.getProfilePicture(); }
+        await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => {
+
+const { imageMessage } = await message.client.prepareMessageMedia(res.data, MessageType.image);
+  const buttons = [
+  {buttonId: `id1`, buttonText: {displayText: button1}, type: 1},
+  {buttonId: `id2`, buttonText: {displayText: button2}, type: 1}
+]
+const buttonMessage = {
+    contentText: Config.ALIVEMSG.replace('{button}', '').replace('{time}', afnplk).replace('{qt}', r_text[i]).replace('{sysd}', '```' + child + '```'),
+    footerText: `SHADOW BOT © 2021`,
+    buttons: buttons,
+    headerType: 4,
+    imageMessage: imageMessage
+}
+ }
   await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage)
 }
   else {
