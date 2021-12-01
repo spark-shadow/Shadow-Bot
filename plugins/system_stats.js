@@ -61,6 +61,8 @@ r_text[28] = "There are three things you can do with your life: You can waste it
 r_text[29] = "You only pass through this life once, you don't come back for an encore.\n       -Elvis Presley";
 r_text[30] = "motivate cheyaan aarkum kayyum ath cheyth kaanikkaaana paad.\n       -Pinky";    
 var i = Math.floor(31*Math.random())
+
+const child = spawnSync('neofetch', ['--stdout']).stdout.toString('utf-8')
        
     if (Config.ALIVEMSG.includes('{pp}')) {
         
@@ -92,7 +94,6 @@ const buttonMessage = {
 }
   else {
            var url = await axios.get(Config.ALIVEURL, { responseType: 'arraybuffer' })
-           const child = spawnSync('neofetch', ['--stdout']).stdout.toString('utf-8')
            await message.client.sendMessage(message.jid, Buffer.from(url.data), MessageType.image, { caption: Config.ALIVEMSG.replace('{time}', afnplk).replace('{qt}', r_text[i]).replace('{sysd}', '```' + child + '```')});
 	   }
 }));
