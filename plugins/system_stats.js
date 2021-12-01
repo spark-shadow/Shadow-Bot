@@ -85,8 +85,8 @@ const child = spawnSync('neofetch', ['--stdout']).stdout.toString('utf-8')
   {buttonId: `id2`, buttonText: {displayText: button2}, type: 1}
 ]
 const buttonMessage = {
-    contentText: Config.ALIVEMSG.replace('{time}', afnplk).replace('{qt}', r_text[i]).replace('{sysd}', '```' + child + '```'),
-    footerText: `SHADOW © 2021`,
+    contentText: Config.ALIVEMSG.replace('{button}', '').replace('{time}', afnplk).replace('{qt}', r_text[i]).replace('{sysd}', '```' + child + '```'),
+    footerText: Spark.VERIFY,
     buttons: buttons,
     headerType: 1
 }
