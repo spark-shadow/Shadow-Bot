@@ -85,7 +85,7 @@ var i = Math.floor(31*Math.random())
   {buttonId: `id2`, buttonText: {displayText: button2}, type: 1}
 ]
 const buttonMessage = {
-    contentText: Config.ALIVEMSG.replace('{time}', afnplk).replace('{qt}', r_text[i]).replace('{sysd}', '```' + child + '```')}),
+    contentText: 'Hello',
     footerText: `SHADOW © 2021`,
     buttons: buttons,
     headerType: 1
