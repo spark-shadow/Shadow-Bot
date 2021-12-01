@@ -88,7 +88,7 @@ const imageMessage = await message.client.prepareMessageMedia(Buffer.from(url.da
 ]
 const buttonMessage = {
     contentText: Config.ALIVEMSG.replace('{button}', '').replace('{time}', afnplk).replace('{qt}', r_text[i]).replace('{sysd}', '```' + child + '```'),
-    footerText: SHADOW BOT © 2021,
+    footerText: `SHADOW BOT © 2021`,
     buttons: buttons,
     headerType: 4
     imageMessage: imageMessage
