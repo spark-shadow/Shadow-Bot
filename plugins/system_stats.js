@@ -68,7 +68,7 @@ const child = spawnSync('neofetch', ['--stdout']).stdout.toString('utf-8')
         
         let pp
         try { pp = await message.client.getProfilePicture(message.jid.includes('-') ? message.data.participant : message.jid ); } catch { pp = await message.client.getProfilePicture(); }
-        await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => { await message.client.sendMessage(message.jid, res.data, MessageType.image, { caption: Config.ALIVEMSG.replace('{pp}', '').replace('#time', plk_say).replace('{date}', plk_here).replace('#qt', r_text[i])}).replace('#sysd', '```' + child + '```')});
+        await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => { await message.client.sendMessage(message.jid, res.data, MessageType.image, { caption: Config.ALIVEMSG.replace('#pp', '').replace('#time', plk_say).replace('{date}', plk_here).replace('#qt', r_text[i])}).replace('#sysd', '```' + child + '```')});
 	}
 
 // Media Button Alive - #button/url & #button/pp
@@ -86,7 +86,7 @@ const { imageMessage } = await message.client.prepareMessageMedia(Buffer.from(ur
   {buttonId: `id2`, buttonText: {displayText: button2}, type: 1}
 ]
 const buttonMessage = {
-    contentText: Config.ALIVEMSG.replace('{buttonurl}', '').replace('#time', plk_say).replace('{date}', plk_here).replace('#qt', r_text[i]).replace('#sysd', '```' + child + '```'),
+    contentText: Config.ALIVEMSG.replace('#button/url', '').replace('#time', plk_say).replace('{date}', plk_here).replace('#qt', r_text[i]).replace('#sysd', '```' + child + '```'),
     footerText: `SHADOW BOT © 2021`,
     buttons: buttons,
     headerType: 4,
@@ -112,7 +112,7 @@ const { imageMessage } = await message.client.prepareMessageMedia(Buffer.from(bu
   {buttonId: `id2`, buttonText: {displayText: button2}, type: 1}
 ]
 const buttonMessage = {
-    contentText: Config.ALIVEMSG.replace('{buttonpp}', '').replace('#time', plk_say).replace('{date}', plk_here).replace('#qt', r_text[i]).replace('#sysd', '```' + child + '```'),
+    contentText: Config.ALIVEMSG.replace('#button/pp', '').replace('#time', plk_say).replace('{date}', plk_here).replace('#qt', r_text[i]).replace('#sysd', '```' + child + '```'),
     footerText: `SHADOW BOT © 2021`,
     buttons: buttons,
     headerType: 4,
