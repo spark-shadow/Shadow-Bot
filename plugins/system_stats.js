@@ -74,7 +74,7 @@ const child = spawnSync('neofetch', ['--stdout']).stdout.toString('utf-8')
 
 // Media Button Alive - {button/url} & {button/pp}
 
-	  else if (Config.ALIVEMSG.includes('{buttonurl}')) {
+	  else if (Config.ALIVEMSG.includes('{button/url}')) {
                var button1, button2;
                if (Spark.BUTTON.includes('/')) {
                var split = Spark.BUTTON.split('/');
@@ -95,7 +95,7 @@ const buttonMessage = {
 }
   await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage)
 }
- else if (Config.ALIVEMSG.includes('{buttonpp}')) {
+ else if (Config.ALIVEMSG.includes('{button/pp}')) {
                var button1, button2;
                if (Spark.BUTTON.includes('/')) {
                var split = Spark.BUTTON.split('/');
