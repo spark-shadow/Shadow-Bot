@@ -68,7 +68,7 @@ const child = spawnSync('neofetch', ['--stdout']).stdout.toString('utf-8')
         
         let pp
         try { pp = await message.client.getProfilePicture(message.jid.includes('-') ? message.data.participant : message.jid ); } catch { pp = await message.client.getProfilePicture(); }
-        await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => { await message.client.sendMessage(message.jid, res.data, MessageType.image, { caption: Config.ALIVEMSG.replace('#pp', '').replace('#time', plk_say).replace('{date}', plk_here).replace('#qt', r_text[i])}).replace('#sysd', '```' + child + '```'), quoted: message.data});
+        await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => { await message.client.sendMessage(message.jid, res.data, MessageType.image, { caption: Config.ALIVEMSG.replace('#pp', '').replace('#time', plk_say).replace('{date}', plk_here).replace('#qt', r_text[i])}).replace('#sysd', '```' + child + '```')});
 	}
 
 // Media Button Alive - #button/url & #button/pp
