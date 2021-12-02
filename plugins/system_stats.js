@@ -72,8 +72,8 @@ const child = spawnSync('neofetch', ['--stdout']).stdout.toString('utf-8')
         await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => { await message.client.sendMessage(message.jid, res.data, MessageType.image, { caption: Config.ALIVEMSG.replace('{pp}', '').replace('{time}', afnplk).replace('{qt}', r_text[i])}).replace('{sysd}', '```' + child + '```')});
 	}
 
-// Media Button Alive - {button/url}
-    
+// Media Button Alive - {button/url} & {button/pp}
+
 	  else if (Config.ALIVEMSG.includes('{buttonurl}')) {
                var button1, button2;
                if (Spark.BUTTON.includes('/')) {
@@ -95,9 +95,6 @@ const buttonMessage = {
 }
   await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage)
 }
-
-// Media Button Alive - {button/pp} 
-
  else if (Config.ALIVEMSG.includes('{buttonpp}')) {
                var button1, button2;
                if (Spark.BUTTON.includes('/')) {
@@ -122,7 +119,6 @@ const buttonMessage = {
     headerType: 4,
     imageMessage: imageMessage
 }
- }
   await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage)
 }
   else {
