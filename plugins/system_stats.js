@@ -26,8 +26,7 @@ ShadoW.addCommand({pattern: 'alive', fromMe: wk, desc: Lang.ALIVE_DESC}, (async 
 	var plk_say = new Date().toLocaleString('HI', { timeZone: 'Asia/Kolkata' }).split(' ')[1]
         const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
         var plk_here = new Date().toLocaleDateString(get_localized_date)
-	var afnplk = '```⏱ Time :' + plk_say + '```\n\n ```📅 Date :' + plk_here + '```'
-        var url = await axios.get(Config.ALIVEURL, { responseType: 'arraybuffer' })
+	var url = await axios.get(Config.ALIVEURL, { responseType: 'arraybuffer' })
 	   
 	   	     var r_text = new Array ();    
 r_text[0] = "The greatest glory in living lies not in never falling, but in rising every time we fall.\n           -Nelson Mandela";
@@ -69,12 +68,12 @@ const child = spawnSync('neofetch', ['--stdout']).stdout.toString('utf-8')
         
         let pp
         try { pp = await message.client.getProfilePicture(message.jid.includes('-') ? message.data.participant : message.jid ); } catch { pp = await message.client.getProfilePicture(); }
-        await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => { await message.client.sendMessage(message.jid, res.data, MessageType.image, { caption: Config.ALIVEMSG.replace('{pp}', '').replace('{time}', afnplk).replace('{qt}', r_text[i])}).replace('{sysd}', '```' + child + '```')});
+        await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => { await message.client.sendMessage(message.jid, res.data, MessageType.image, { caption: Config.ALIVEMSG.replace('{pp}', '').replace('#time', plk_say).replace('{date}', plk_here).replace('#qt', r_text[i])}).replace('#sysd', '```' + child + '```')});
 	}
 
-// Media Button Alive - {button/url} & {button/pp}
+// Media Button Alive - #button/url & #button/pp
 
-	  else if (Config.ALIVEMSG.includes('{button/url}')) {
+	  else if (Config.ALIVEMSG.includes('#button/url')) {
                var button1, button2;
                if (Spark.BUTTON.includes('/')) {
                var split = Spark.BUTTON.split('/');
@@ -87,7 +86,7 @@ const { imageMessage } = await message.client.prepareMessageMedia(Buffer.from(ur
   {buttonId: `id2`, buttonText: {displayText: button2}, type: 1}
 ]
 const buttonMessage = {
-    contentText: Config.ALIVEMSG.replace('{buttonurl}', '').replace('{time}', afnplk).replace('{qt}', r_text[i]).replace('{sysd}', '```' + child + '```'),
+    contentText: Config.ALIVEMSG.replace('{buttonurl}', '').replace('#time', plk_say).replace('{date}', plk_here).replace('#qt', r_text[i]).replace('#sysd', '```' + child + '```'),
     footerText: `SHADOW BOT © 2021`,
     buttons: buttons,
     headerType: 4,
@@ -95,7 +94,7 @@ const buttonMessage = {
 }
   await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage)
 }
- else if (Config.ALIVEMSG.includes('{button/pp}')) {
+ else if (Config.ALIVEMSG.includes('#button/pp')) {
                var button1, button2;
                if (Spark.BUTTON.includes('/')) {
                var split = Spark.BUTTON.split('/');
@@ -113,7 +112,7 @@ const { imageMessage } = await message.client.prepareMessageMedia(Buffer.from(bu
   {buttonId: `id2`, buttonText: {displayText: button2}, type: 1}
 ]
 const buttonMessage = {
-    contentText: Config.ALIVEMSG.replace('{buttonpp}', '').replace('{time}', afnplk).replace('{qt}', r_text[i]).replace('{sysd}', '```' + child + '```'),
+    contentText: Config.ALIVEMSG.replace('{buttonpp}', '').replace('#time', plk_say).replace('{date}', plk_here).replace('#qt', r_text[i]).replace('#sysd', '```' + child + '```'),
     footerText: `SHADOW BOT © 2021`,
     buttons: buttons,
     headerType: 4,
@@ -123,7 +122,7 @@ const buttonMessage = {
 }
   else {
            var url = await axios.get(Config.ALIVEURL, { responseType: 'arraybuffer' })
-           await message.client.sendMessage(message.jid, Buffer.from(url.data), MessageType.image, { caption: Config.ALIVEMSG.replace('{time}', afnplk).replace('{qt}', r_text[i]).replace('{sysd}', '```' + child + '```')});
+           await message.client.sendMessage(message.jid, Buffer.from(url.data), MessageType.image, { caption: Config.ALIVEMSG.replace('#time', plk_say).replace('{date}', plk_here).replace('#qt', r_text[i]).replace('#sysd', '```' + child + '```')});
 	   }
 }));
 
