@@ -74,8 +74,8 @@ const child = spawnSync('neofetch', ['--stdout']).stdout.toString('utf-8')
 
 // Media Button Alive - {button/url}
     
-	  else if (Config.ALIVEMSG.includes('{button/url}')) {
-               var comEmoji, descEmoji;
+	  else if (Config.ALIVEMSG.includes('{buttonurl}')) {
+               var button1, button2;
                if (Spark.BUTTON.includes('/')) {
                var split = Spark.BUTTON.split('/');
                button1 = split[0];
@@ -87,7 +87,7 @@ const { imageMessage } = await message.client.prepareMessageMedia(Buffer.from(ur
   {buttonId: `id2`, buttonText: {displayText: button2}, type: 1}
 ]
 const buttonMessage = {
-    contentText: Config.ALIVEMSG.replace('{button/url}', '').replace('{time}', afnplk).replace('{qt}', r_text[i]).replace('{sysd}', '```' + child + '```'),
+    contentText: Config.ALIVEMSG.replace('{buttonurl}', '').replace('{time}', afnplk).replace('{qt}', r_text[i]).replace('{sysd}', '```' + child + '```'),
     footerText: `SHADOW BOT © 2021`,
     buttons: buttons,
     headerType: 4,
@@ -98,8 +98,8 @@ const buttonMessage = {
 
 // Media Button Alive - {button/pp} 
 
- else if (Config.ALIVEMSG.includes('{button/url}')) {
-               var comEmoji, descEmoji;
+ else if (Config.ALIVEMSG.includes('{buttonpp}')) {
+               var button1, button2;
                if (Spark.BUTTON.includes('/')) {
                var split = Spark.BUTTON.split('/');
                button1 = split[0];
@@ -108,15 +108,15 @@ const buttonMessage = {
 
         let pp
         try { pp = await message.client.getProfilePicture(message.jid.includes('-') ? message.data.participant : message.jid ); } catch { pp = await message.client.getProfilePicture(); }
-        await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => {
+        var buttonpp = await axios.get(pp, {responseType: 'arraybuffer'})
 
-const { imageMessage } = await message.client.prepareMessageMedia(res.data, MessageType.image);
+const { imageMessage } = await message.client.prepareMessageMedia(Buffer.from(buttonpp.data), MessageType.image);
   const buttons = [
   {buttonId: `id1`, buttonText: {displayText: button1}, type: 1},
   {buttonId: `id2`, buttonText: {displayText: button2}, type: 1}
 ]
 const buttonMessage = {
-    contentText: Config.ALIVEMSG.replace('{button/pp}', '').replace('{time}', afnplk).replace('{qt}', r_text[i]).replace('{sysd}', '```' + child + '```'),
+    contentText: Config.ALIVEMSG.replace('{buttonpp}', '').replace('{time}', afnplk).replace('{qt}', r_text[i]).replace('{sysd}', '```' + child + '```'),
     footerText: `SHADOW BOT © 2021`,
     buttons: buttons,
     headerType: 4,
