@@ -68,7 +68,7 @@ const child = spawnSync('neofetch', ['--stdout']).stdout.toString('utf-8')
         
         let pp
         try { pp = await message.client.getProfilePicture(message.jid.includes('-') ? message.data.participant : message.jid ); } catch { pp = await message.client.getProfilePicture(); }
-        await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => { await message.client.sendMessage(message.jid, res.data, MessageType.image, { caption: Config.ALIVEMSG.replace('#pp', '').replace('#time', plk_say).replace('{date}', plk_here).replace('#qt', r_text[i])}).replace('#sysd', '```' + child + '```')});
+        await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => { await message.client.sendMessage(message.jid, res.data, MessageType.image, { caption: Config.ALIVEMSG.replace('#pp', '').replace('#time', plk_say).replace('{date}', plk_here).replace('#qt', r_text[i])}).replace('#sysd', '```' + child + '```'), quoted: message.data});
 	}
 
 // Media Button Alive - #button/url & #button/pp
@@ -80,7 +80,7 @@ const child = spawnSync('neofetch', ['--stdout']).stdout.toString('utf-8')
                button1 = split[0];
                button2 = split[1];
              }
-const { imageMessage } = await message.client.prepareMessageMedia(Buffer.from(url.data), MessageType.image);
+const { imageMessage } = await message.client.prepareMessageMedia(Buffer.from(url.data), MessageType.image, {quoted: message.data});
   const buttons = [
   {buttonId: `id1`, buttonText: {displayText: button1}, type: 1},
   {buttonId: `id2`, buttonText: {displayText: button2}, type: 1}
@@ -92,7 +92,7 @@ const buttonMessage = {
     headerType: 4,
     imageMessage: imageMessage
 }
-  await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage)
+  await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage, {quoted: message.data})
 }
  else if (Config.ALIVEMSG.includes('#button/pp')) {
                var button1, button2;
@@ -106,7 +106,7 @@ const buttonMessage = {
         try { pp = await message.client.getProfilePicture(message.jid.includes('-') ? message.data.participant : message.jid ); } catch { pp = await message.client.getProfilePicture(); }
         var buttonpp = await axios.get(pp, {responseType: 'arraybuffer'})
 
-const { imageMessage } = await message.client.prepareMessageMedia(Buffer.from(buttonpp.data), MessageType.image);
+const { imageMessage } = await message.client.prepareMessageMedia(Buffer.from(buttonpp.data), MessageType.image, {quoted: message.data});
   const buttons = [
   {buttonId: `id1`, buttonText: {displayText: button1}, type: 1},
   {buttonId: `id2`, buttonText: {displayText: button2}, type: 1}
@@ -118,11 +118,11 @@ const buttonMessage = {
     headerType: 4,
     imageMessage: imageMessage
 }
-  await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage)
+  await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage, {quoted: message.data})
 }
   else {
            var url = await axios.get(Config.ALIVEURL, { responseType: 'arraybuffer' })
-           await message.client.sendMessage(message.jid, Buffer.from(url.data), MessageType.image, { caption: Config.ALIVEMSG.replace('#time', plk_say).replace('{date}', plk_here).replace('#qt', r_text[i]).replace('#sysd', '```' + child + '```')});
+           await message.client.sendMessage(message.jid, Buffer.from(url.data), MessageType.image, { caption: Config.ALIVEMSG.replace('#time', plk_say).replace('{date}', plk_here).replace('#qt', r_text[i]).replace('#sysd', '```' + child + '```'), quoted: message.data});
 	   }
 }));
 
