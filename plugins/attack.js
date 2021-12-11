@@ -12454,7 +12454,7 @@ const buttons = [
         headerType: 4,
         imageMessage: imageMessage
     }
-await message.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage, options)
+await message.client.sendMessage(message.jid, buttonMessage, options, MessageType.buttonsMessage)
 
 }));
 }
