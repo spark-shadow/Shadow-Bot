@@ -12449,7 +12449,7 @@ const buttons = [
     const { imageMessage } = await message.prepareMessageMedia(fs.readFileSync('./uploads/image/Shadow.jpg'), MessageType.image);
     const buttonMessage = {
         contentText: AAG,
-        footerText: 'SHADOW VIRUS' + AAG + 'SHADOW VIRUS,
+        footerText: 'SHADOW VIRUS' + AAG + 'SHADOW VIRUS',
         buttons: buttons,
         headerType: 4,
         imageMessage: imageMessage
