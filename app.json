@@ -193,9 +193,9 @@
             "required": false
         },
         "ALIVE_MESSAGE": {
-            "description": "Customizable Alive Message! use {pp} if you want to add profile picture also add {qt} if you want to add qoutes in your welcome message",
+            "description": "Customizable Alive Message! use #pp if you want to add profile picture also add #qt if you want to add qoutes in your welcome message #time for show live time. #dat3 for date. #sysd for sytem properties. If you wnat buttons in alive msg type #button/pp or #button/url... pp=dp of comand user... url=the url u give in ALIVE_URL...",
             "required": false,
-            "value": "i am alive  \n\n ```coded by Shadow```\n\n```{qt}```"
+            "value": "*Bot is Alive...\n\nTIME: #time \nDATE: #date \n\n#sysd \n#button/pp"
         },
         "ALIVE_URL": {
             "description": "Customizable Alive Image!",
