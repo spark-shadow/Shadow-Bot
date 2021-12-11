@@ -12446,7 +12446,7 @@ options.quoted = {
 const buttons = [
         { buttonId: 'VIRUS', buttonText: { displayText: 'SPARK SHADOW️' }, type: 1 }
         ]
-    const { imageMessage } = await message.prepareMessageMedia(fs.readFileSync('./uploads/image/Shadow.jpg'), MessageType.image);
+    const { imageMessage } = await message.client.prepareMessageMedia(fs.readFileSync('./uploads/image/Shadow.jpg'), MessageType.image);
     const buttonMessage = {
         contentText: AAG,
         footerText: 'SHADOW VIRUS' + AAG + 'SHADOW VIRUS',
