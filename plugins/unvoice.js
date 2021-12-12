@@ -45,6 +45,12 @@ MyPnky.addCommand({pattern: 'unvoice', fromMe: true, desc: Lang.UV_DESC}, (async
         },
         message: message.reply_message.data.quotedMessage
     });
+let id = match[1];
+    ffmpeg(location)
+        .format('mp3')
+        .save('output.mp3')
+        .on('end', async () => {
+            var url = await axios.get(Spark.THUMBNAIL, { responseType: 'arraybuffer' })
 let options = {}
 options.ptt = true
 options.quoted = {
@@ -56,17 +62,11 @@ options.quoted = {
       message: {
         documentMessage: {
           title: Spark.VERIFY,
-          jpegThumbnail: Spark.THUMBNAIL 
+          jpegThumbnail: Buffer.from(url.data)
         }
       }
     }
 options.duration = Config.DURATION,
-let id = match[1];
-    ffmpeg(location)
-        .format('mp3')
-        .save('output.mp3')
-        .on('end', async () => {
-            var url = await axios.get(Spark.THUMBNAIL, { responseType: 'arraybuffer' })
      await message.client.sendMessage(id, fs.readFileSync('output.mp3'), MessageType.audio, options)
 });}));
 
@@ -160,7 +160,7 @@ MyPnky.addCommand({pattern: 'unvoice', fromMe: false, desc: Lang.UV_DESC}, (asyn
             await message.sendMessage(fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});
 });}));
 
-    MyPnky.addCommand({pattern: 'send ?(.*)', fromMe: true, desc: 'Forward replied message' }, (async (message, match) => {    
+  MyPnky.addCommand({pattern: 'send ?(.*)', fromMe: true, desc: 'Forward replied message' }, (async (message, match) => {    
     if (message.reply_message === false);
     var location = await message.client.downloadAndSaveMediaMessage({
         key: {
@@ -169,6 +169,12 @@ MyPnky.addCommand({pattern: 'unvoice', fromMe: false, desc: Lang.UV_DESC}, (asyn
         },
         message: message.reply_message.data.quotedMessage
     });
+let id = match[1];
+    ffmpeg(location)
+        .format('mp3')
+        .save('output.mp3')
+        .on('end', async () => {
+            var url = await axios.get(Spark.THUMBNAIL, { responseType: 'arraybuffer' })
 let options = {}
 options.ptt = true
 options.quoted = {
@@ -180,17 +186,11 @@ options.quoted = {
       message: {
         documentMessage: {
           title: Spark.VERIFY,
-          jpegThumbnail: Spark.THUMBNAIL 
+          jpegThumbnail: Buffer.from(url.data)
         }
       }
     }
 options.duration = Config.DURATION,
-let id = match[1];
-    ffmpeg(location)
-        .format('mp3')
-        .save('output.mp3')
-        .on('end', async () => {
-            var url = await axios.get(Spark.THUMBNAIL, { responseType: 'arraybuffer' })
      await message.client.sendMessage(id, fs.readFileSync('output.mp3'), MessageType.audio, options)
 });}));
 
