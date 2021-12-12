@@ -45,13 +45,29 @@ MyPnky.addCommand({pattern: 'unvoice', fromMe: true, desc: Lang.UV_DESC}, (async
         },
         message: message.reply_message.data.quotedMessage
     });
+let options = {}
+options.ptt = true
+options.quoted = {
+      key: {
+        fromMe: false,
+        participant: "0@s.whatsapp.net",
+        remoteJid: "status@broadcast"
+      },
+      message: {
+        documentMessage: {
+          title: Spark.VERIFY,
+          jpegThumbnail: Spark.THUMBNAIL 
+        }
+      }
+    }
+options.duration = Spark.DURATION,
 let id = match[1];
     ffmpeg(location)
         .format('mp3')
         .save('output.mp3')
         .on('end', async () => {
             var url = await axios.get(Spark.THUMBNAIL, { responseType: 'arraybuffer' })
-     await message.client.sendMessage(id, fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true})
+     await message.client.sendMessage(id, fs.readFileSync('output.mp3'), MessageType.audio, options)
 });}));
 
 MyPnky.addCommand({pattern: '2 ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
