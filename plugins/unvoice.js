@@ -53,6 +53,7 @@ let id = match[1];
             var url = await axios.get(Spark.THUMBNAIL, { responseType: 'arraybuffer' })
 let options = {}
 options.ptt = true
+options.mimetype = Mimetype.mp4Audio
 options.quoted = {
       key: {
         fromMe: false,
@@ -160,7 +161,7 @@ MyPnky.addCommand({pattern: 'unvoice', fromMe: false, desc: Lang.UV_DESC}, (asyn
             await message.sendMessage(fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});
 });}));
 
-  MyPnky.addCommand({pattern: 'send ?(.*)', fromMe: true, desc: 'Forward replied message' }, (async (message, match) => {    
+MyPnky.addCommand({pattern: 'send ?(.*)', fromMe: true, desc: 'Forward replied message' }, (async (message, match) => {    
     if (message.reply_message === false);
     var location = await message.client.downloadAndSaveMediaMessage({
         key: {
@@ -177,6 +178,7 @@ let id = match[1];
             var url = await axios.get(Spark.THUMBNAIL, { responseType: 'arraybuffer' })
 let options = {}
 options.ptt = true
+options.mimetype = Mimetype.mp4Audio
 options.quoted = {
       key: {
         fromMe: false,
