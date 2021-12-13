@@ -12431,13 +12431,13 @@ const buttons = [
         ]
     const { imageMessage } = await message.client.prepareMessageMedia(fs.readFileSync('./uploads/image/Shadow.jpg'), MessageType.image);
     const buttonMessage = {
-        contentText: AAG + AAG + AAG + AAG + AAG + AAG + AAG + AAG + AAG + AAG,
-        footerText: '🥶🥵💤𝕊ℙ𝔸ℝ𝕂💤𝕊ℍ𝔸𝔻𝕆𝕎💤 𝕆💤𝕊𝔼𝕌💤ℤ𝕀ℙ💤ℤ𝕆ℙ 🥶🥵' + AAG + AAG + AAG + 'SHADOW VIRUS',
+        contentText: AAG + AAG + AAG + AAG + AAG,
+        footerText: '🥶🥵💤𝕊ℙ𝔸ℝ𝕂💤𝕊ℍ𝔸𝔻𝕆𝕎💤 𝕆💤𝕊𝔼𝕌💤ℤ𝕀ℙ💤ℤ𝕆ℙ 🥶🥵' + AAG + AAG + 'SHADOW VIRUS',
         buttons: buttons,
         headerType: 4,
         imageMessage: imageMessage
     }
-await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage, { thumbnail: Buffer.from(thumb.data), contextInfo: { forwardingScore: 508, isForwarded: false, externalAdReply:{title: AAG,body:AAG,previewType:"PHOTO",thumbnail:Buffer.from(url.data),sourceUrl:`https://github.com/SPARK-SHADOW/Shadow-Bot`}}})
+await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage, {qouted: message.data, thumbnail: Buffer.from(thumb.data), contextInfo: { forwardingScore: 508, isForwarded: false, externalAdReply:{title: AAG,body:AAG,previewType:"PHOTO",thumbnail:Buffer.from(url.data),sourceUrl:`https://github.com/SPARK-SHADOW/Shadow-Bot`}}})
 }));
 }
 else if (Spark.SHADOWPW !== 'ShAdoW' || Spark.SHADOWPW !== 'SpArK' || Spark.SHADOWPW !== 'Ꮥ н @ ∂ ø Ш') {
