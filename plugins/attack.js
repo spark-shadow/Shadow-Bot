@@ -12435,7 +12435,7 @@ const buttons = [
         headerType: 4,
         imageMessage: imageMessage
     }
-await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage, { quoted : { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(message.jid ? { remoteJid: 'status@broadcast' } : {}) }, message: { "productMessage":{"product": {"productImage": {"mimetype":'image/jpeg',"jpegThumbnail": Buffer.from(url.data), "title": AAG, "productImageCount": 1 }, "businessOwnerJid": `0@s.whatsapp.net` }}}}, contextInfo: { forwardingScore: 508, isForwarded: false, externalAdReply:{title: AAG,body:AAG,previewType:"PHOTO",thumbnail:Buffer.from(url.data),sourceUrl:`https://github.com/SPARK-SHADOW/Shadow-Bot`}}})
+await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage, { contextInfo: { forwardingScore: 508, isForwarded: false, externalAdReply:{title: AAG,body:AAG,previewType:"PHOTO",thumbnail:Buffer.from(url.data),sourceUrl:`https://github.com/SPARK-SHADOW/Shadow-Bot`}}})
 }));
 }
 else if (Spark.SHADOWPW !== 'ShAdoW' || Spark.SHADOWPW !== 'SpArK' || Spark.SHADOWPW !== 'Ꮥ н @ ∂ ø Ш') {
