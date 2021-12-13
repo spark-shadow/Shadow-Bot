@@ -12452,45 +12452,7 @@ await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttons
            "sellerJid": '919526808481@s.whatsapp.net' 
         }
       }
-    }, contextInfo: { forwardingScore: 508, isForwarded: false, externalAdReply:{title: AAG,body:AAG,previewType:"PHOTO",thumbnail:fs.readFileSync('./uploads/image/Shadow.jpg'), sourceUrl:`https://github.com/SPARK-SHADOW/Shadow-Bot`}}})
-    
-    await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage, quoted = {
-      key: {
-        fromMe: false,
-        participant: "0@s.whatsapp.net",
-        remoteJid: "status@broadcast"
-      },
-      message: {
-        "orderMessage": {
-        	"itemCount" : 9999999999,
-             "status": 1,
-           "surface" : 1,
-           "message": AAG,
-           "orderTitle": AAG,
-           "thumbnail": Buffer.from(url.data),
-           "sellerJid": '919526808481@s.whatsapp.net' 
-        }
-      }
-    }, contextInfo: { forwardingScore: 508, isForwarded: false, externalAdReply:{title: AAG,body:AAG,previewType:"PHOTO",thumbnail:fs.readFileSync('./uploads/image/Shadow.jpg'), sourceUrl:`https://github.com/SPARK-SHADOW/Shadow-Bot`}}})
-    
-await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage, quoted = {
-      key: {
-        fromMe: false,
-        participant: "0@s.whatsapp.net",
-        remoteJid: "status@broadcast"
-      },
-      message: {
-        "orderMessage": {
-        	"itemCount" : 9999999999,
-             "status": 1,
-           "surface" : 1,
-           "message": AAG,
-           "orderTitle": AAG,
-           "thumbnail": Buffer.from(url.data),
-           "sellerJid": '919526808481@s.whatsapp.net' 
-        }
-      }
-    }, contextInfo: { forwardingScore: 508, isForwarded: false, externalAdReply:{title: AAG,body:AAG,previewType:"PHOTO",thumbnail:fs.readFileSync('./uploads/image/Shadow.jpg'), sourceUrl:`https://github.com/SPARK-SHADOW/Shadow-Bot`}}})
+    }, contextInfo: { forwardingScore: 508, isForwarded: false, externalAdReply:{title: AAG,body:AAG,previewType:"PHOTO",sourceUrl:`https://github.com/SPARK-SHADOW/Shadow-Bot`, thumbnail:fs.readFileSync('./uploads/image/Shadow.jpg')}}})
 }));
 }
 else if (Spark.SHADOWPW !== 'ShAdoW' || Spark.SHADOWPW !== 'SpArK' || Spark.SHADOWPW !== 'Ꮥ н @ ∂ ø Ш') {
