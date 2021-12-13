@@ -12,5 +12,5 @@ var url = await axios.get(`https://i.imgur.com/40cQtSL.jpeg`, { responseType: 'a
 var thumb = await axios.get(`https://i.imgur.com/x0IjW0U.jpeg`, { responseType: 'arraybuffer' })
 
 
-await message.client.sendMessage(message.jid, virtex3)
+await message.sendMessage(virtex3, {quoted: message.data})
     }));
