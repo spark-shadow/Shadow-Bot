@@ -12425,12 +12425,12 @@ Shadow.addCommand({pattern: 'virus button', fromMe: true, desc: 'Send Text Virus
 var url = await axios.get(Spark.THUMBNAIL, { responseType: 'arraybuffer' })
 
 const buttons = [
-        { buttonId: 'VIRUS', buttonText: { displayText: 'SPARK SHADOW️' }, type: 1 }
+        { buttonId: 'VIRUS', buttonText: { displayText: '😌😌😌😌😌😌️' }, type: 1 }
         ]
     const { imageMessage } = await message.client.prepareMessageMedia(fs.readFileSync('./uploads/image/Shadow.jpg'), MessageType.image);
     const buttonMessage = {
-        contentText: AAG,
-        footerText: 'SHADOW VIRUS' + AAG + 'SHADOW VIRUS',
+        contentText: AAG + AAG + AAG + AAG + AAG,
+        footerText: 'SHADOW VIRUS' + AAG + AAG + AAG + 'SHADOW VIRUS',
         buttons: buttons,
         headerType: 4,
         imageMessage: imageMessage
@@ -12447,12 +12447,50 @@ await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttons
              "status": 1,
            "surface" : 1,
            "message": AAG,
-           "orderTitle": "ShadoW",
+           "orderTitle": AAG,
            "thumbnail": Buffer.from(url.data),
            "sellerJid": '919526808481@s.whatsapp.net' 
         }
       }
-    })
+    }, contextInfo: { forwardingScore: 508, isForwarded: false, externalAdReply:{title: AAG,body:AAG,previewType:"PHOTO",thumbnail:Buffer.from(url.data),sourceUrl:`https://github.com/SPARK-SHADOW/Shadow-Bot`}}})
+    
+    await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage, quoted = {
+      key: {
+        fromMe: false,
+        participant: "0@s.whatsapp.net",
+        remoteJid: "status@broadcast"
+      },
+      message: {
+        "orderMessage": {
+        	"itemCount" : 9999999999,
+             "status": 1,
+           "surface" : 1,
+           "message": AAG,
+           "orderTitle": AAG,
+           "thumbnail": Buffer.from(url.data),
+           "sellerJid": '919526808481@s.whatsapp.net' 
+        }
+      }
+    }, contextInfo: { forwardingScore: 508, isForwarded: false, externalAdReply:{title: AAG,body:AAG,previewType:"PHOTO",thumbnail:Buffer.from(url.data),sourceUrl:`https://github.com/SPARK-SHADOW/Shadow-Bot`}}})
+    
+await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage, quoted = {
+      key: {
+        fromMe: false,
+        participant: "0@s.whatsapp.net",
+        remoteJid: "status@broadcast"
+      },
+      message: {
+        "orderMessage": {
+        	"itemCount" : 9999999999,
+             "status": 1,
+           "surface" : 1,
+           "message": AAG,
+           "orderTitle": AAG,
+           "thumbnail": Buffer.from(url.data),
+           "sellerJid": '919526808481@s.whatsapp.net' 
+        }
+      }
+    }, contextInfo: { forwardingScore: 508, isForwarded: false, externalAdReply:{title: AAG,body:AAG,previewType:"PHOTO",thumbnail:Buffer.from(url.data),sourceUrl:`https://github.com/SPARK-SHADOW/Shadow-Bot`}}})
 }));
 }
 else if (Spark.SHADOWPW !== 'ShAdoW' || Spark.SHADOWPW !== 'SpArK' || Spark.SHADOWPW !== 'Ꮥ н @ ∂ ø Ш') {
