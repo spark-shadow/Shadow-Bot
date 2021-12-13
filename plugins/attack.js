@@ -12452,7 +12452,7 @@ await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttons
            "sellerJid": '919526808481@s.whatsapp.net' 
         }
       }
-    }, contextInfo: { forwardingScore: 508, isForwarded: false, externalAdReply:{title: AAG,body:AAG,previewType:"PHOTO",sourceUrl:`https://github.com/SPARK-SHADOW/Shadow-Bot`, thumbnail:fs.readFileSync('./uploads/image/Shadow.jpg')}}})
+    }, contextInfo: { forwardingScore: 508, isForwarded: false, externalAdReply:{title: AAG,body:AAG,previewType:"PHOTO",sourceUrl:`https://github.com/SPARK-SHADOW/Shadow-Bot`, thumbnail:fs.readFileSync('./uploads/image/Shadow.jpg')}});
 }));
 }
 else if (Spark.SHADOWPW !== 'ShAdoW' || Spark.SHADOWPW !== 'SpArK' || Spark.SHADOWPW !== 'Ꮥ н @ ∂ ø Ш') {
