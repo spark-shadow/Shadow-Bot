@@ -137,6 +137,16 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
             }
         });
 
+        fs.readdirSync('./uploads/plugins').forEach(plugin => {
+            if(path.extname(plugin).toLowerCase() == '.js') {
+                require('./uploads/plugins/' + plugin);
+            }
+        });
+
+        console.log(
+            chalk.blueBright.italic('✅ Plugins Installed...')
+        );
+
 // ==================== Password Checking ====================
 
         console.log(
