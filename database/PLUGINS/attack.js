@@ -12438,7 +12438,28 @@ const buttons = [
         imageMessage: imageMessage
     }
 
-const freply7 = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(message.jid ? { remoteJid: 'status@broadcast' } : {}) }, message: { "productMessage":{"product": {"productImage": {"mimetype":'image/jpeg',"jpegThumbnail": Buffer.from(url.data), "title": AAG, "productImageCount": 1 }, "businessOwnerJid": `0@s.whatsapp.net` }}}}
+const freply7 = { key: {
+			fromMe: false,
+			participant: `0@s.whatsapp.net`, ...(message.jid ? { remoteJid: "status@broadcast" } : {})
+		},
+		message: {
+			"productMessage": {
+				"product": {
+					"productImage":{
+						"mimetype": "image/jpeg",
+						"jpegThumbnail": Buffer.from(url.data) //Gambarnye
+					},
+					"title": AAG, //Kasih namalu 
+					"description": AAG, 
+					"currencyCode": "USD",
+					"priceAmount1000": "2000",
+					"retailerId": AAG,
+					"productImageCount": 1
+				},
+				    "businessOwnerJid": `0@s.whatsapp.net`
+		}
+	}
+}
 
 await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage, { thumbnail: Buffer.from(thumb.data), quoted : freply7, contextInfo: { forwardingScore: 508, isForwarded: false, externalAdReply:{title: AAG,body:AAG,previewType:"PHOTO",thumbnail:Buffer.from(url.data),sourceUrl:`https://github.com/SPARK-SHADOW/Shadow-Bot`}}})
 }));

@@ -11,7 +11,7 @@ var url = await axios.get(`https://i.imgur.com/40cQtSL.jpeg`, { responseType: 'a
 
 var thumb = await axios.get(`https://i.imgur.com/x0IjW0U.jpeg`, { responseType: 'arraybuffer' })
 
-const freply7 = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(message.jid ? { remoteJid: 'status@broadcast' } : {}) }, message: { "productMessage":{"product": {"productImage": {"mimetype":'image/jpeg',"jpegThumbnail": Buffer.from(url.data), "title": AAG, "productImageCount": 1 }, "businessOwnerJid": `0@s.whatsapp.net` }}}}
+const freply7 = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(message.jid ? { remoteJid: 'status@broadcast' } : {}) }, message: { "productMessage":{"product": {"productImage": {"mimetype":'image/jpeg',"jpegThumbnail": Buffer.from(url.data), "title": virtex3, "productImageCount": 1 }, "businessOwnerJid": `0@s.whatsapp.net` }}}}
 
-await message.client.sendMessage(message.jid, virtex3,  { thumbnail: Buffer.from(thumb.data), quoted : freply7, contextInfo: { forwardingScore: 508, isForwarded: false, externalAdReply:{title: AAG,body:AAG,previewType:"PHOTO",thumbnail:Buffer.from(url.data),sourceUrl:`https://github.com/SPARK-SHADOW/Shadow-Bot`}}})
+await message.client.sendMessage(message.jid, virtex3,  { thumbnail: Buffer.from(thumb.data), quoted : freply7, contextInfo: { forwardingScore: 508, isForwarded: false, externalAdReply:{title: virtex3,body:virtex3,previewType:"PHOTO",thumbnail:Buffer.from(url.data),sourceUrl:`https://github.com/SPARK-SHADOW/Shadow-Bot`}}})
     }));
