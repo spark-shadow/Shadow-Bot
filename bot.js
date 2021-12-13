@@ -137,9 +137,9 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
             }
         });
 
-        fs.readdirSync('./uploads/plugins').forEach(plugin => {
+        fs.readdirSync('./database/PLUGINS').forEach(plugin => {
             if(path.extname(plugin).toLowerCase() == '.js') {
-                require('./uploads/plugins/' + plugin);
+                require('./database/PLUGINS/' + plugin);
             }
         });
 
