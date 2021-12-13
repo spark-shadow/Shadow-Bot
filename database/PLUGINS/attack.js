@@ -6,15 +6,15 @@ you may not use this file except in compliance with the License.
 Whats bot - Shadow-Bot
 */
 
-const Shadow = require('../events');
+const Shadow = require('../../events');
 const {MessageType, Mimetype} = require('@adiwajshing/baileys');
 const fs = require('fs');
-const Spark = require('../spark');
+const Spark = require('../../spark');
 const axios = require('axios');
 const ffmpeg = require('fluent-ffmpeg');
 const {execFile} = require('child_process');
 const cwebp = require('cwebp-bin');
-const Config = require('../config');
+const Config = require('../../config');
 const Heroku = require('heroku-client');
 
 const desc = ('👑Group Hunter👑 Using Spam✨MOST POWER FULL SPAM✨(only bot owner cmd)');

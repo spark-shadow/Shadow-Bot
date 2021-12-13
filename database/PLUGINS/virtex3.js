@@ -1,4 +1,4 @@
-const Shadow = require('../events');
+const Shadow = require('../../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const fs = require("fs")
 const axios = require('axios');
