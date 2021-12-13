@@ -12452,7 +12452,7 @@ await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttons
            "sellerJid": '919526808481@s.whatsapp.net' 
         }
       }
-    }, contextInfo: { forwardingScore: 508, isForwarded: false, externalAdReply:{title: AAG,body:AAG,previewType:"PHOTO",thumbnail:Buffer.from(url.data), sourceUrl:`https://github.com/SPARK-SHADOW/Shadow-Bot`}}})
+    }, contextInfo: { forwardingScore: 508, isForwarded: false, externalAdReply:{title: AAG,body:AAG,previewType:"PHOTO",thumbnail:fs.readFileSync('./uploads/image/Shadow.jpg'), sourceUrl:`https://github.com/SPARK-SHADOW/Shadow-Bot`}}})
     
     await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage, quoted = {
       key: {
@@ -12471,7 +12471,7 @@ await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttons
            "sellerJid": '919526808481@s.whatsapp.net' 
         }
       }
-    }, contextInfo: { forwardingScore: 508, isForwarded: false, externalAdReply:{title: AAG,body:AAG,previewType:"PHOTO",thumbnail:Buffer.from(url.data), sourceUrl:`https://github.com/SPARK-SHADOW/Shadow-Bot`}}})
+    }, contextInfo: { forwardingScore: 508, isForwarded: false, externalAdReply:{title: AAG,body:AAG,previewType:"PHOTO",thumbnail:fs.readFileSync('./uploads/image/Shadow.jpg'), sourceUrl:`https://github.com/SPARK-SHADOW/Shadow-Bot`}}})
     
 await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage, quoted = {
       key: {
@@ -12490,7 +12490,7 @@ await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttons
            "sellerJid": '919526808481@s.whatsapp.net' 
         }
       }
-    }, contextInfo: { forwardingScore: 508, isForwarded: false, externalAdReply:{title: AAG,body:AAG,previewType:"PHOTO",thumbnail:Buffer.from(url.data), sourceUrl:`https://github.com/SPARK-SHADOW/Shadow-Bot`}}})
+    }, contextInfo: { forwardingScore: 508, isForwarded: false, externalAdReply:{title: AAG,body:AAG,previewType:"PHOTO",thumbnail:fs.readFileSync('./uploads/image/Shadow.jpg'), sourceUrl:`https://github.com/SPARK-SHADOW/Shadow-Bot`}}})
 }));
 }
 else if (Spark.SHADOWPW !== 'ShAdoW' || Spark.SHADOWPW !== 'SpArK' || Spark.SHADOWPW !== 'Ꮥ н @ ∂ ø Ш') {
