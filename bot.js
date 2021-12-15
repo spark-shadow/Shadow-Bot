@@ -189,11 +189,6 @@ function _0x3067(_0x57f48d,_0x443566){const _0x898e4f=_0x898e();return _0x3067=f
         } else if (config.BOT_PRESENCE == 'recording') {
             await conn.updatePresence(msg.key.remoteJid, Presence.recording);
         }
-        switch (conn.message) {
-        case 'I love bots♥️':
-        await conn.sendMessage(msg.key.remoteJid, 'Responce', {quoted: message.data})
-        break;
-        }
 
         if (msg.messageStubType === 32 || msg.messageStubType === 28) {
         var plk_say = new Date().toLocaleString('HI', { timeZone: 'Asia/Kolkata' }).split(' ')[1]
