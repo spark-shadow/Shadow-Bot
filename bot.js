@@ -176,7 +176,7 @@ case 'I love bots♥️':
 await conn.sendMessage(message.jid, 'Responce', {quoted: message.data})
 break;
 }
-})
+ );
     
     conn.on('chat-update', async m => {
         if (!m.hasNewMessage) return;
