@@ -317,7 +317,7 @@ if (config.STANDPLK == 'off' || config.STANDPLK == 'OFF') {
                 text: ttsMessage,
                 voice: LANG
             });
-            await message.client.sendMessage(message.jid,buffer, MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});
+            await message.client.sendMessage(message.jid,buffer, MessageType.audio, {quoted: message.data, mimetype: Mimetype.mp4Audio, ptt: true});
         }));
     }
     else {
@@ -344,7 +344,7 @@ if (config.STANDPLK == 'off' || config.STANDPLK == 'OFF') {
                 text: ttsMessage,
                 voice: LANG
             });
-            await message.client.sendMessage(message.jid,buffer, MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});
+            await message.client.sendMessage(message.jid,buffer, MessageType.audio, {quoted: message.data, mimetype: Mimetype.mp4Audio, ptt: true});
         }));
     }
     MyPnky.addCommand({pattern: 'song ?(.*)', fromMe: wk, desc: Lang.SONG_DESC}, (async (message, match) => { 
@@ -376,7 +376,7 @@ if (config.STANDPLK == 'off' || config.STANDPLK == 'OFF') {
                 writer.addTag();
 
                 reply = await message.client.sendMessage(message.jid,Lang.UPLOADING_SONG,MessageType.text);
-                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: false});
+                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {quoted: message.data, mimetype: Mimetype.mp4Audio, ptt: false});
             });
     }));
     
