@@ -33,7 +33,7 @@ MyPnky.addCommand({pattern: 'unvoice', fromMe: true, desc: Lang.UV_DESC}, (async
         .format('mp3')
         .save('output.mp3')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});
+            await message.sendMessage(fs.readFileSync('output.mp3'), MessageType.audio, {quoted: message.data, mimetype: Mimetype.mp4Audio, ptt: true});
 });}));
 
   MyPnky.addCommand({pattern: 'send ?(.*)', fromMe: true, desc: 'Forward replied message' }, (async (message, match) => {    
@@ -158,7 +158,7 @@ MyPnky.addCommand({pattern: 'unvoice', fromMe: false, desc: Lang.UV_DESC}, (asyn
         .format('mp3')
         .save('output.mp3')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});
+            await message.sendMessage(fs.readFileSync('output.mp3'), MessageType.audio, {quoted: message.data, mimetype: Mimetype.mp4Audio, ptt: true});
 });}));
 
 MyPnky.addCommand({pattern: 'send ?(.*)', fromMe: true, desc: 'Forward replied message' }, (async (message, match) => {    
