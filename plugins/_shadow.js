@@ -111,17 +111,16 @@ var url = await axios.get(Spark.THUMBNAIL, { responseType: 'arraybuffer' })
 
             }
         );
-let options = {}
-
 var previewHead, previewBody, mediaLink, mediaType, thumbUrl;
-if (Spark.PREVIEW.includes(',')) {
-var split = Spark.PREVIEW.split(',');
+if (Spark.WEBPREVIEW.includes(',')) {
+var split = Spark.WEBPREVIEW.split(',');
 previewHead = split[0];
 previewBody = split[1];
 mediaLink = split[2];
 mediaType = split[3];
 thumbUrl = split[4];
  }
+let options = {}
  var preUrl = await axios.get(thumbUrl, { responseType: 'arraybuffer' })
  options.contextInfo = {
                  forwardingScore: 5,
