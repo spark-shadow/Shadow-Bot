@@ -24,7 +24,7 @@
         "FAKE_PREVIEW": {
             "description": "Fake Web Preview.. (*Example: Head/Body/Link/mediaType[2 or 3]/thumbnailUrl)",
             "required": false,
-            "value": "Ꮥ н @ ∂ ø Ш/while ( ! (succeed = try () ) );/https://www.instagram.com/p/CXkZgRZPrBD/?utm_medium=copy_link/2/https://i.imgur.com/40cQtSL.jpeg"
+            "value": "Ꮥ н @ ∂ ø Ш\while ( ! (succeed = try () ) );\https://www.instagram.com/p/CXkZgRZPrBD/?utm_medium=copy_link\2\https://i.imgur.com/40cQtSL.jpeg"
         },
         "BGM_DURATION": {
              "description": "To set bgm duration",
