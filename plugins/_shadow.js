@@ -113,7 +113,7 @@ var url = await axios.get(Spark.THUMBNAIL, { responseType: 'arraybuffer' })
         );
 let options = {}
 
-var previewHead, previewBody, mediaLink, MediaType;
+var previewHead, previewBody, mediaLink, mediaType, thumbUrl;
 if (Spark.PREVIEW.includes('/')) {
 var split = Spark.PREVIEW.split('/');
 previewHead = split[0];
