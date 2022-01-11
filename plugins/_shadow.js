@@ -13,6 +13,7 @@ let wk = Config.WORKTYPE == 'public' ? false : true
 const Language = require('../language');
 const Lang = Language.getString('_asena');
 const hrs = new Date().getHours({ timeZone: 'Asia/Kolkata' })
+const { shadowButton } = require('../database/MODULES/shadowButtons');
 
 if (Config.STANDPLK == 'off') {
 if (Config.MENUTYPE == 'one' || Config.MENUTYPE == 'One' || Config.MENUTYPE == 'ONE' || Config.MENUTYPE == '1' ) {
