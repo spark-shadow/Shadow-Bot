@@ -7,9 +7,8 @@
 ```
 https://heroku.com/deploy?template=https://github.com/SPARK-SHADOW/Shadow-Bot
 ``` 
-5. Now clik the url showing up and copy the url and change SPARK-SHADOW with your github username and click ENJOY<br>
+5. Now copy the url and change SPARK-SHADOW with your github username and click ENJOY<br>
    <br>
    <br>
-
 # Contact for help:
    * Click [Contact](https://wa.me/50371711717?text=Need+Help🙂) Here For Contact Shadow
