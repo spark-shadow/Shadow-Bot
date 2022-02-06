@@ -5,7 +5,7 @@
 3. If You don't have a account in [Heroku](https://signup.heroku.com/), Create a account.
 4. Click [FORK](https://github.com/SPARK-SHADOW/Shadow-Bot/fork)
 
-</https://heroku.com/deploy?template=https://github.com/SPARK-SHADOW/Shadow-Bot>
+< https://heroku.com/deploy?template=https://github.com/SPARK-SHADOW/Shadow-Bot >
 
 5. Now clik the url showing up and copy the url and change SPARK-SHADOW with your github username and click ENJOY<br>
    <br>
