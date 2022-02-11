@@ -1,4 +1,4 @@
-const Shadow = require('../events');
+const Shadow = require('../../events');
 const {MessageType} = require('@adiwajshing/baileys');
 let wk = Config.WORKTYPE == 'public' ? false : true
 
