@@ -1,6 +1,6 @@
 const Shadow = require('../../events');
 const {MessageType} = require('@adiwajshing/baileys');
-const Config = require('../config');
+const Config = require('../../config');
 let wk = Config.WORKTYPE == 'public' ? false : true
 
 Shadow.addCommand({pattern: 'test ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
