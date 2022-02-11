@@ -26,6 +26,7 @@ await message.client.sendMessage(message.jid, listButton, MessageType.listMessag
 
 Shadow.addCommand({on: 'text', fromMe: false}, (async (message, match) => {   
 
+const type = Object.keys(message.message)[0]
 selectedButton = (type == 'buttonsResponseMessage') ? message.message.buttonsResponseMessage.selectedButtonId : ''
 responseButton = (type == 'listResponseMessage') ? message.message.listResponseMessage.title : ''
 
