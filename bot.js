@@ -1,8 +1,3 @@
-/* Copyright (C) 2020 Yusuf Usta.
-RECODDED BY AFNANPPLK
-Plk  
-*/
-
 const os = require("os");
 const fs = require("fs");
 const path = require("path");
@@ -75,6 +70,8 @@ async function whatsAsena () {
     
     const conn = new WAConnection();
     const Session = new StringSession();
+
+    conn.browserDescription = ["Shadow-Bot", "Safari", '1.0.0']
 
     conn.logger.level = config.DEBUG ? 'debug' : 'warn';
     var nodb;
