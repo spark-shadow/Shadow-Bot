@@ -1,8 +1,3 @@
-/* Copyright (C) 2020 Yusuf Usta.
-RECODDED BY AFNANPPLK
-Plk  
-*/
-
 const os = require("os");
 const fs = require("fs");
 const path = require("path");
