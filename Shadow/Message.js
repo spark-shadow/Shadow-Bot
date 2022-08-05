@@ -6,7 +6,7 @@ WhatsAsena - Yusuf Usta
 
 const {MessageType, Presence, MessageOptions} = require('@adiwajshing/baileys');
 const Base = require('./Base');
-const ReplyMessage = require('./ReplyMessage');
+const ReplyMessage = require('./poython');
 
 class Message extends Base {
     constructor(client, data) {
